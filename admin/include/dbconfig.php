@@ -17,7 +17,7 @@ if (session_status() == PHP_SESSION_NONE) {
  */
 $server = "localhost";
 $username = "u261452081_calcuttamedic";
-$password = "CalcuttaMedicalStore@123";
+$password = "CalcuttaMedicalStores@123";
 $database = "u261452081_calcuttamedic";
 $port = 3306;
 
