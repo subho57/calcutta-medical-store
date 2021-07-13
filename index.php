@@ -1767,13 +1767,13 @@
                                         </div>
                                     </div>
                                     <div _ngcontent-sc69="" class="column">
-                                        <div _ngcontent-sc69="" class="landing-header__logo"><a _ngcontent-sc69="" routerlink="index.php" href="index.php"><img _ngcontent-sc69="" alt="<?php echo $fset['title']; ?>" height="40" data-src="images/logo.png" class="lazyload"></a></div>
+                                        <div _ngcontent-sc69="" class="landing-header__logo"><a _ngcontent-sc69="" routerlink="index.php" href="index.php"><img _ngcontent-sc69="" alt="<?php echo $fset['title']; ?>" height="40" data-src="admin/website/logo.png" class="lazyload"></a></div>
                                         <!---->
                                         <!---->
                                     </div>
                                     <div _ngcontent-sc69="" class="column">
                                         <div _ngcontent-sc69="" class="row row--middle row--gutter row--right btn-right">
-                                            <div _ngcontent-sc69="" class="column"><a href="admin/"><button _ngcontent-sc69="" translate="" keyname="landing.navbar.login" class="card__header xsmall divider divider--t divider--r divider--b divider--l color-dark">LOG
+                                            <div _ngcontent-sc69="" class="column"><a href="https://www.admin.calcuttamedicalstore.in/"><button _ngcontent-sc69="" translate="" keyname="landing.navbar.login" class="card__header xsmall divider divider--t divider--r divider--b divider--l color-dark">LOG
                                                         IN</button></a></div>
 
                                             <!---->
