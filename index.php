@@ -1767,7 +1767,7 @@
                                         </div>
                                     </div>
                                     <div _ngcontent-sc69="" class="column">
-                                        <div _ngcontent-sc69="" class="landing-header__logo"><a _ngcontent-sc69="" routerlink="index.php" href="index.php"><img _ngcontent-sc69="" alt="<?php echo $fset['title']; ?>" height="40" data-src="logo.png" class="lazyload"></a></div>
+                                        <div _ngcontent-sc69="" class="landing-header__logo"><a _ngcontent-sc69="" routerlink="index.php" href="index.php"><img _ngcontent-sc69="" alt="<?php echo $fset['title']; ?>" height="40" data-src="images/logo.png" class="lazyload"></a></div>
                                         <!---->
                                         <!---->
                                     </div>
