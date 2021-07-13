@@ -41,7 +41,7 @@ require 'include/header.php';
                                                 </thead>
                                                 <tbody>
                                                     <?php
-                                                    $sel = $con->query("select * from category where id != 16");
+                                                    $sel = $con->query("select * from category where id != 1");
                                                     $i = 0;
                                                     while ($row = $sel->fetch_assoc()) {
                                                         $i = $i + 1;

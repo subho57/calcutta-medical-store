@@ -35,7 +35,7 @@ require 'include/header.php';
                             <div class="px-3 py-3">
                               <div class="media">
                                 <div class="media-body text-left">
-                                  <h3 class="mb-1 danger"><?php echo $con->query("select * from category")->num_rows; ?></h3>
+                                  <h3 class="mb-1 danger"><?php echo $con->query("select * from category where id != 1")->num_rows; ?></h3>
                                   <span>Total Category</span>
                                 </div>
                                 <div class="media-right align-self-center">
@@ -56,7 +56,7 @@ require 'include/header.php';
                             <div class="px-3 py-3">
                               <div class="media">
                                 <div class="media-body text-left">
-                                  <h3 class="mb-1 danger"><?php echo $con->query("select * from subcategory")->num_rows; ?></h3>
+                                  <h3 class="mb-1 danger"><?php echo $con->query("select * from subcategory where cid != 1")->num_rows; ?></h3>
                                   <span>Total Sub Cat.</span>
                                 </div>
                                 <div class="media-right align-self-center">
