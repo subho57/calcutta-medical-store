@@ -1,0 +1,13 @@
+# misc
+.DS_Store
+
+# image directories
+# /product
+# /cat
+# /subcat
+# /website
+# /payment
+# /banner
+# /coupon
+/.vscode
+/.idea
