@@ -23,7 +23,7 @@ require 'include/header.php';
                                     <div class="card-body collapse show">
                                         <div class="card-block card-dashboard">
                                             <?php
-                                            $sel = $con->query("select * from subcategory where cat_id=16");
+                                            $sel = $con->query("select * from subcategory where cat_id=1");
                                             $i = 0;
                                             while ($row = $sel->fetch_assoc()) {
                                                 $i = $i + 1;

@@ -112,7 +112,7 @@ function sendMessage($title)
                                             <?php
                                             if (isset($_POST['sub_cat'])) {
                                                 $cname = mysqli_real_escape_string($con, $_POST['cname']);
-                                                $cid = 16;
+                                                $cid = 1;
 
                                                 $fileName = $_FILES['f_up']['tmp_name'];
                                                 $sourceProperties = getimagesize($fileName);
@@ -315,7 +315,7 @@ function sendMessage($title)
                                 $pname = mysqli_real_escape_string($con, $_POST['pname']);
                                 $sname = $_POST['sname'];
 
-                                $catname = 16;
+                                $catname = 1;
                                 $subcatname = $_POST['subcatname'];
                                 $ostock = $_POST['ostock'];
                                 $snoti = $_POST['snoti'];
@@ -427,7 +427,7 @@ function sendMessage($title)
     ?>
     <script>
     $(document).on('change', '#vname', function() {
-        var value = 16;
+        var value = 1;
 
         $.ajax({
             type: 'post',

@@ -58,18 +58,18 @@
 
                 </li>
 
-                <!-- <li class="has-sub nav-item"><a href="#">
+                <li class="has-sub nav-item"><a href="#">
                         <font size=5>🎁</font><span data-i18n="" class="menu-title">&nbsp;&nbsp;Offer Zone</span>
                     </a>
                     <ul class="menu-content">
-                        <li><a href="category.php?edit=16" class="menu-item">Edit Offer Zone</a>
+                        <li><a href="category.php?edit=1" class="menu-item">Edit Offer Zone</a>
                         </li>
                         <li><a href="offerzone.php" class="menu-item">Add Special Offer</a>
                         </li>
                         <li><a href="offerzonelist.php" class="menu-item">List Offers</a>
                         </li>
                     </ul>
-                </li> -->
+                </li>
                 <li class="has-sub nav-item"><a href="#"><i class="fa fa-gift"></i><span data-i18n=""
                                                                                          class="menu-title">Coupon</span></a>
                     <ul class="menu-content">

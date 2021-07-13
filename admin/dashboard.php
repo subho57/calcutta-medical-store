@@ -109,14 +109,15 @@ require 'include/header.php';
                       </div>
                     </div>
 
-                    <!-- <div class="col-xl-3 col-lg-6 col-12">
+                    <div class="col-xl-3 col-lg-6 col-12">
                       <div class="card">
                         <a href="offerzonelist.php">
                           <div class="card-content">
                             <div class="px-3 py-3">
                               <div class="media">
                                 <div class="media-body text-left">
-                                  <h3 class="mb-1 success"><?php // echo $con->query("select * from product where cid = 16")->num_rows; ?></h3>
+                                  <h3 class="mb-1 success"><?php echo $con->query("select * from product where cid = 1")->num_rows; 
+                                                            ?></h3>
                                   <span>Total Offers</span>
                                 </div>
                                 <div class="media-right align-self-center">
@@ -127,7 +128,7 @@ require 'include/header.php';
                           </div>
                         </a>
                       </div>
-                    </div> -->
+                    </div>
 
                     <div class="col-xl-3 col-lg-6 col-12">
                       <div class="card">
