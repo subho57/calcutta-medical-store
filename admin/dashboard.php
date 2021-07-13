@@ -410,7 +410,7 @@ require 'include/header.php';
             window.OneSignal = window.OneSignal || [];
             OneSignal.push(function() {
               OneSignal.init({
-                appId: "3e36f0e3-f4c5-49b0-8d89-985ee1cb4e18",
+                appId: "<?php echo $fset['admin_key']; ?>",
               });
             });
           </script>
