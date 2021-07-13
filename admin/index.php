@@ -8,6 +8,7 @@ if (!empty($_SESSION['username'])) {
 ?>
     <!DOCTYPE html>
     <html lang="en" class="loading">
+
     <head>
         <!-- Subhankar Pal | @subho57 -->
         <meta name="description" content="<?php echo $fset['title']; ?>">
@@ -119,13 +120,14 @@ if (!empty($_SESSION['username'])) {
 
                         if ($name->num_rows != 0) {
                             $_SESSION['username'] = $email;
-                            ?>
+                    ?>
                             <script>
                                 window.location.href = "dashboard.php";
                             </script>
-                            <?php
+                        <?php
+                            exit;
                         } else {
-                    ?>
+                        ?>
                             <script type="text/javascript">
                                 $(document).ready(function() {
                                     toastr.options.timeOut = 4500; // 1.5s
@@ -146,6 +148,7 @@ if (!empty($_SESSION['username'])) {
         <script src="assets/vendor/select2/select2.min.js"></script>
         <script src="assets/js/main.js"></script>
     </body>
+
     </html>
 
 <?php
