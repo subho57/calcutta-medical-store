@@ -33,7 +33,7 @@ require 'admin/include/dbconfig.php';
         <div class="d-flex align-items-center justify-content-between">
           <div class="logo">
             <div class="site-logo">
-              <a href="index.php" class="js-logo-clone"><img src="<?php echo $fset['logo']; ?>" alt="IMG" width="100px">CMS</a>
+              <a href="index.php" class="js-logo-clone"><img src="admin/<?php echo $fset['logo']; ?>" alt="CMS" width="100px"></a>
             </div>
           </div>
           <div class="main-nav d-none d-lg-block">
