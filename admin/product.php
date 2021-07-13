@@ -257,22 +257,6 @@ function sendMessages($title)
                                                     </div>
 
                                                     <div class="form-group">
-                                                        <label for="projectinput6">Veg or Non-Veg?</label>
-                                                        <select id="projectinput6" name="nvg" class="form-control">
-
-                                                            <option value="0" <?php if ($selk['nvg'] == 0) {
-                                                                                    echo 'selected';
-                                                                                } ?>>Veg</option>
-                                                            <option <?php if ($selk['nvg'] == 1) {
-                                                                        echo 'selected';
-                                                                    } ?> value="1">Non-Veg</option>
-                                                            <option <?php if ($selk['nvg'] == 2) {
-                                                                        echo 'selected';
-                                                                    } ?> value="2">Egg</option>
-                                                        </select>
-                                                    </div>
-
-                                                    <div class="form-group">
                                                         <label for="gurl">Product Small Description</label>
                                                         <textarea class="form-control" name="psdesc" placeholder="Enter Product Small Description" required><?php echo $selk['psdesc']; ?></textarea>
 
@@ -318,7 +302,7 @@ function sendMessages($title)
 
                                 $sname = $_POST['sname'];
                                 $popular = $_POST['popular'];
-                                $nvg = $_POST['nvg'];
+                                $nvg = "0";
                                 $discount = $_POST['discount_percentage'];
                                 $catname = $_POST['catname'];
                                 $subcatname = $_POST['subcatname'];
@@ -412,9 +396,9 @@ function sendMessages($title)
                                     sendMessages($pname);
 
                                     $timestamp = date("Y-m-d H:i:s");
-                                    $url = 'no_url';
+                                    // $url = $pimg;
                                     $msg = "Product Updated at our Store";
-                                    $con->query("insert into noti(`msg`,`date`,`title`,`img`)values('" . $msg . "','" . $timestamp . "','" . $title . "','" . $url . "')");
+                                    $con->query("insert into noti(`msg`,`date`,`title`,`img`)values('" . $msg . "','" . $timestamp . "','" . $title . "','" . $pimg . "')");
                                 }
 
 
@@ -495,8 +479,6 @@ function sendMessages($title)
                                                         <select id="sub_list" name="subcatname" class="form-control" required>
                                                             <option value="" selected="" disabled="">Select SubCategory
                                                             </option>
-
-
                                                         </select>
                                                     </div>
 
@@ -534,15 +516,6 @@ function sendMessages($title)
 
                                                             <option value="1">Yes</option>
                                                             <option selected="" value="0">No</option>
-                                                        </select>
-                                                    </div>
-
-                                                    <div class="form-group">
-                                                        <label for="projectinput6">Veg or Non-Veg?</label>
-                                                        <select id="projectinput6" name="nvg" class="form-control">
-                                                            <option selected="" value="0">Veg</option>
-                                                            <option value="1">Non-Veg</option>
-                                                            <option value="2">Egg</option>
                                                         </select>
                                                     </div>
 
@@ -603,7 +576,7 @@ function sendMessages($title)
                                 } else {
                                     $pname = mysqli_real_escape_string($con, $_POST['pname']);
                                     $sname = $_POST['sname'];
-                                    $nvg = $_POST['nvg'];
+                                    $nvg = "0";
                                     $catname = $_POST['catname'];
                                     $subcatname = $_POST['subcatname'];
                                     $ostock = $_POST['ostock'];
@@ -683,9 +656,9 @@ function sendMessages($title)
                                         sendMessage($pname);
 
                                         $timestamp = date("Y-m-d H:i:s");
-                                        $title = 'New Product ' . $pname . ' added';
-                                        $url = 'no_url';
-                                        $msg = "New Product Inserted At Our Store.";
+                                        $title = 'New Medcine ' . $pname . ' added';
+                                        // $url = 'no_url';
+                                        $msg = "New Medicine Inserted At Our Store.";
                                         $con->query("insert into noti(`msg`,`date`,`title`,`img`)values('" . $msg . "','" . $timestamp . "','" . $title . "','" . $url . "')");
                                     }
                                 ?>
