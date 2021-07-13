@@ -116,7 +116,7 @@ require 'include/header.php';
                             <div class="px-3 py-3">
                               <div class="media">
                                 <div class="media-body text-left">
-                                  <h3 class="mb-1 success"><?php echo $con->query("select * from product where cid = 1")->num_rows; 
+                                  <h3 class="mb-1 success"><?php echo $con->query("select * from product where cid = 1")->num_rows;
                                                             ?></h3>
                                   <span>Total Offers</span>
                                 </div>
@@ -397,25 +397,18 @@ require 'include/header.php';
 
             </div>
           </div>
-          <style>
-            .col-xl-3.col-lg-6.col-12>.card {
-              background: aliceblue;
-            }
-          </style>
-          <?php
-          require 'include/js.php';
-          ?>
-          <!-- Subhankar Pal | @subho57 -->
-          <script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async=""></script>
-          <script>
-            window.OneSignal = window.OneSignal || [];
-            OneSignal.push(function() {
-              OneSignal.init({
-                appId: "<?php echo $fset['admin_key']; ?>",
-              });
-            });
-          </script>
-
+        </div>
+      </div>
+    </div>
+  </div>
+  <style>
+    .col-xl-3.col-lg-6.col-12>.card {
+      background: aliceblue;
+    }
+  </style>
+  <?php
+  require 'include/js.php';
+  ?>
 </body>
 
 </html>
