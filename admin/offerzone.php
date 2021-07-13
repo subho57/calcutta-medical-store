@@ -206,7 +206,7 @@ function sendMessage($title)
 
                                                 <div class="form-group">
                                                     <label for="gurl">Seller Name / Shop Name</label>
-                                                    <input type="text" id="gurl" class="form-control" placeholder="Enter Seller Name" name="sname" required>
+                                                    <input type="text" id="gurl" class="form-control" placeholder="Enter Seller Name" name="sname" value="<?php echo $fset['title']; ?>" required>
 
                                                 </div>
 
@@ -265,14 +265,14 @@ function sendMessage($title)
 
 
                                                 <div class="form-group">
-                                                    <label for="gurl">Product (Gms,kg,ltr,ml,pcs)</label>
-                                                    <input type="text" id="ptype" class="form-control" name="pgms" value="1 gms,250 gms" data-role="tagsinput" required>
+                                                    <label for="gurl">Product (Strip,pcs,ml)</label>
+                                                    <input type="text" id="ptype" class="form-control" name="pgms" value="1 Strip" data-role="tagsinput" required>
                                                     <p>After write Product Type Press Enter</p>
                                                 </div>
 
                                                 <div class="form-group">
                                                     <label for="gurl">Product Price</label>
-                                                    <input type="text" id="pprice" class="form-control" value="1,10" name="pprice" data-role="tagsinput" required>
+                                                    <input type="text" id="pprice" class="form-control" value="100" name="pprice" data-role="tagsinput" required>
                                                     <p>After write Product Price Press Enter</p>
                                                 </div>
 
@@ -394,8 +394,8 @@ function sendMessage($title)
                                     sendMessage($pname);
 
                                     $timestamp = date("Y-m-d H:i:s");
-                                    $title = 'New Product ' . $pname . ' Added';
-                                    $url = 'no_url';
+                                    $title = 'New Medicine ' . $pname . ' Added';
+                                    // $url = 'no_url';
                                     $msg = "New Special Offer is Inserted at our Store. Grab it before it expires.";
                                     $con->query("insert into noti(`msg`,`date`,`title`,`img`)values('" . $msg . "','" . $timestamp . "','" . $title . "','" . $url . "')");
                                 }

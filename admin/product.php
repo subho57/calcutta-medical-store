@@ -454,7 +454,7 @@ function sendMessages($title)
 
                                                     <div class="form-group">
                                                         <label for="gurl">Seller Name / Shop Name</label>
-                                                        <input type="text" id="gurl" class="form-control" placeholder="Enter Seller Name" name="sname" required>
+                                                        <input type="text" id="gurl" class="form-control" placeholder="Enter Seller Name" name="sname" value="<?php echo $fset['title']; ?>" required>
 
                                                     </div>
 
@@ -527,14 +527,14 @@ function sendMessages($title)
 
 
                                                     <div class="form-group">
-                                                        <label for="ptype">Product Serving(Gms,kg,ltr,ml,pcs)</label>
-                                                        <input type="text" id="ptype" class="form-control" name="pgms" value="500 gms,1 kg,Single Serving" data-role="tagsinput" required>
+                                                        <label for="ptype">Product Serving(Strip,pcs,ml)</label>
+                                                        <input type="text" id="ptype" class="form-control" name="pgms" value="1 Strip" data-role="tagsinput" required>
                                                         <p>After writing Product Type Press Enter</p>
                                                     </div>
 
                                                     <div class="form-group">
                                                         <label for="pprice">Product Price</label>
-                                                        <input type="text" id="pprice" class="form-control" value="100,200,50" name="pprice" data-role="tagsinput" required>
+                                                        <input type="text" id="pprice" class="form-control" value="100" name="pprice" data-role="tagsinput" required>
                                                         <p>After writing Product Price Press Enter</p>
                                                     </div>
 
