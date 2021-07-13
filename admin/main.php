@@ -208,7 +208,7 @@
     <!-- main menu footer-->
 </div>
 <!-- / main menu-->
-<script src="assets/vendors/js/core/jquery-3.2.1.min.js" type="text/javascript"></script>
+<script src="assets/js/core/jquery-3.2.1.min.js" type="text/javascript"></script>
 <link href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.0.1/css/toastr.css" rel="stylesheet"/>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.0.1/js/toastr.js"></script>
 
