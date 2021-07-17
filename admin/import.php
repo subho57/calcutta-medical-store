@@ -84,7 +84,7 @@ require 'include/header.php';
                         $cid = $con->query("select id from category where `catname`='$cname'")->fetch_assoc()['id'];
 
                         $sname = ucwords(strip_tags(mysqli_real_escape_string($con, $data[5])));
-                        $con->query("INSERT INTO `subcategory` SELECT NULL, $cid, '$sname', '' FROM DUAL WHERE NOT EXISTS (SELECT `id` from `subcategory` where `name`='$sname')");
+                        $con->query("INSERT INTO `subcategory` SELECT NULL, $cid, '$sname', '$data[1]' FROM DUAL WHERE NOT EXISTS (SELECT `id` from `subcategory` where `name`='$sname')");
                         $sid = $con->query("select id from subcategory where `name`='$sname'")->fetch_assoc()['id'];
                         
                         $con->query("insert into product(`pname`,`pimg`,`prel`,`sname`,`cid`,`sid`,`psdesc`,`pgms`,`pprice`,`date`,`status`,`stock`,`discount`,`popular`)values('" . ucwords(strip_tags(mysqli_real_escape_string($con, $data[0]))) . "','" . $data[1] . "','" . $data[2] . "','" . $data[3] . "'," . $cid . "," . $sid . ",'" . $data[6] . "','" . $data[7] . "','" . $data[8] . "','" . $timestamp . "'," . $data[10] . "," . $data[9] . "," . $data[11] . "," . $data[12] . ")");
