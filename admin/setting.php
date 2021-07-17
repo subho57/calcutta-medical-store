@@ -87,7 +87,7 @@ function resizeImage($resourceType, $image_width, $image_height, $resizeWidth, $
 												</div>
 												<div class="col-md-3 col-lg-3 col-xs-12 col-sm-12">
 													<div class="form-group">
-														<label for="cname">TAX %</label>
+														<label for="cname">Service Charge %</label>
 														<input type="text" id="cname" class="form-control" name="tax" value="<?php echo $getkey['tax']; ?>" required>
 													</div>
 												</div>
@@ -101,7 +101,7 @@ function resizeImage($resourceType, $image_width, $image_height, $resizeWidth, $
 
 												<div class="col-md-3 col-lg-3 col-xs-12 col-sm-12">
 													<div class="form-group">
-														<label for="cname">App Under Maintaince?</label>
+														<label for="cname">App Under Maintenance?</label>
 														<select name="maintaince" class="form-control">
 															<option value="0" <?php if ($getkey['maintaince'] == 0) {
 																					echo 'selected';
