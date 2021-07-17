@@ -2122,6 +2122,438 @@
                                                         <!---->
                                                         <!---->
                                                     </div>
+                                                    <div class="b0t70b" id="testimonials" data-panel="testimonials-panel"
+                            jslog="64389; track:impression;">
+                            <hr class="WUdCTb" />
+                            <h2 class="Igsabe">Testimonials</h2>
+                            <div class="EIjale">
+                                <div class="iTushb">
+                                    <div class="zGTRLd">
+                                        <div class="CoamRb">
+                                            <div class="XZleqe sp"><svg class="Pmm3mc" style="fill:currentColor"
+                                                    viewBox="0 0 24 24">
+                                                    <path
+                                                        d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+                                                </svg></div>
+                                            <div class="TpcqSc"><svg class="Pmm3mc" style="fill:currentColor"
+                                                    viewBox="0 0 24 24">
+                                                    <path
+                                                        d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+                                                </svg></div>
+                                        </div>
+                                        <div class="CoamRb">
+                                            <div class="XZleqe sp"><svg class="Pmm3mc" style="fill:currentColor"
+                                                    viewBox="0 0 24 24">
+                                                    <path
+                                                        d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+                                                </svg></div>
+                                            <div class="TpcqSc"><svg class="Pmm3mc" style="fill:currentColor"
+                                                    viewBox="0 0 24 24">
+                                                    <path
+                                                        d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+                                                </svg></div>
+                                        </div>
+                                        <div class="CoamRb">
+                                            <div class="XZleqe sp"><svg class="Pmm3mc" style="fill:currentColor"
+                                                    viewBox="0 0 24 24">
+                                                    <path
+                                                        d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+                                                </svg></div>
+                                            <div class="TpcqSc"><svg class="Pmm3mc" style="fill:currentColor"
+                                                    viewBox="0 0 24 24">
+                                                    <path
+                                                        d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+                                                </svg></div>
+                                        </div>
+                                        <div class="CoamRb">
+                                            <div class="XZleqe sp"><svg class="Pmm3mc" style="fill:currentColor"
+                                                    viewBox="0 0 24 24">
+                                                    <path
+                                                        d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+                                                </svg></div>
+                                            <div class="TpcqSc"><svg class="Pmm3mc" style="fill:currentColor"
+                                                    viewBox="0 0 24 24">
+                                                    <path
+                                                        d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+                                                </svg></div>
+                                        </div>
+                                        <div class="CoamRb">
+                                            <div class="XZleqe sp"><svg class="Pmm3mc" style="fill:currentColor"
+                                                    viewBox="0 0 24 24">
+                                                    <path
+                                                        d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+                                                </svg></div>
+                                            <div class="TpcqSc"><svg class="Pmm3mc" style="fill:currentColor"
+                                                    viewBox="0 0 24 24">
+                                                    <path
+                                                        d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+                                                </svg></div>
+                                        </div>
+                                        <div class="P0eG7b">4 months ago</div>
+                                        <div role="button" class="U26fgb JRtysb WzwrXb" jscontroller="iSvg6e"
+                                            jsaction="click:cOuCgd; mousedown:UX7yZ; mouseup:lbsD7e; mouseenter:tfO1Yc; mouseleave:JywGue; focus:AHmuwe; blur:O22p3e; contextmenu:mg9Pef;touchstart:p6p2H; touchmove:FwuNnf; touchend:yfqBxc(preventMouseEvents=true|preventDefault=true); touchcancel:JMtRjd;;keydown:I481le;"
+                                            jsshadow aria-disabled="false" tabindex="0" aria-haspopup="true"
+                                            aria-expanded="false" data-alignright="true">
+                                            <div class="NWlf3e MbhUzd" jsname="ksKsZd"></div><span jsslot
+                                                class="MhXXcc oJeWuf"><span class="Lw7GHd snByac"><span class="DPvwYc"
+                                                        aria-hidden="true">&#xE5D4;</span></span></span>
+                                            <div jsname="xl07Ob" style="display:none" aria-hidden="true">
+                                                <div class="JPdR6b" jscontroller="uY3Nvd"
+                                                    jsaction="IpSVtb:TvD9Pc;fEN2Ze:xzS4ub;frq95c:LNeFm;cFpp9e:J9oOtd; click:H8nU8b; mouseup:H8nU8b; keydown:I481le; keypress:Kr2w4b; blur:O22p3e; focus:H8nU8b"
+                                                    role="menu" tabindex="0" jsshadow>
+                                                    <div class="XvhY1d" jsaction="mousedown:p8EH2c; touchstart:p8EH2c;">
+                                                        <div class="JAPqpe K0NPx"><span jsslot class="z80M1"
+                                                                jsaction="click:o6ZaF(preventDefault=true); mousedown:lAhnzb; mouseup:Osgxgf; mouseenter:SKyDAe; mouseleave:xq3APb;touchstart:jJiBRc; touchmove:kZeBdd; touchend:VfAz8(preventMouseEvents=true)"
+                                                                jsname="j7LFlb" aria-label="Flag as inappropriate"
+                                                                role="menuitem" tabindex="-1">
+                                                                <div class="aBBjbd MbhUzd" jsname="ksKsZd"></div>
+                                                                <div class="uyYuVb oJeWuf" jscontroller="hr05tc"
+                                                                    jsaction="click:FNFY6c" data-target="_blank"
+                                                                    data-href="https://www.google.com/local/review/rap/report?postId=ChdDSUhNMG9nS0VJQ0FnSUR5aExXTjNBRRAB&amp;entityid=ChdDSUhNMG9nS0VJQ0FnSUR5aExXTjNBRRotChZDSUhNMG9nS0VJQ0FnSUR5aExXTlBBEhNDZ3dJbjlqWWdRWVE0TlQxMFFJIhIJVwBda9BxAjoRBYhvbcdLlaAqE0Nnd0luOWpZZ1FZUTROVDEwUUk&amp;wv=1&amp;s=131">
+                                                                    <div class="jO7h3c">Flag as inappropriate</div>
+                                                                </div>
+                                                            </span></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div><cite class="YSOJuc CoIOBe">- Buddhadeb D</cite>
+                                </div>
+                                <div class="iTushb">
+                                    <div class="zGTRLd">
+                                        <div class="CoamRb">
+                                            <div class="XZleqe sp"><svg class="Pmm3mc" style="fill:currentColor"
+                                                    viewBox="0 0 24 24">
+                                                    <path
+                                                        d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+                                                </svg></div>
+                                            <div class="TpcqSc"><svg class="Pmm3mc" style="fill:currentColor"
+                                                    viewBox="0 0 24 24">
+                                                    <path
+                                                        d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+                                                </svg></div>
+                                        </div>
+                                        <div class="CoamRb">
+                                            <div class="XZleqe sp"><svg class="Pmm3mc" style="fill:currentColor"
+                                                    viewBox="0 0 24 24">
+                                                    <path
+                                                        d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+                                                </svg></div>
+                                            <div class="TpcqSc"><svg class="Pmm3mc" style="fill:currentColor"
+                                                    viewBox="0 0 24 24">
+                                                    <path
+                                                        d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+                                                </svg></div>
+                                        </div>
+                                        <div class="CoamRb">
+                                            <div class="XZleqe sp"><svg class="Pmm3mc" style="fill:currentColor"
+                                                    viewBox="0 0 24 24">
+                                                    <path
+                                                        d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+                                                </svg></div>
+                                            <div class="TpcqSc"><svg class="Pmm3mc" style="fill:currentColor"
+                                                    viewBox="0 0 24 24">
+                                                    <path
+                                                        d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+                                                </svg></div>
+                                        </div>
+                                        <div class="CoamRb">
+                                            <div class="XZleqe sp"><svg class="Pmm3mc" style="fill:currentColor"
+                                                    viewBox="0 0 24 24">
+                                                    <path
+                                                        d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+                                                </svg></div>
+                                            <div class="TpcqSc"><svg class="Pmm3mc" style="fill:currentColor"
+                                                    viewBox="0 0 24 24">
+                                                    <path
+                                                        d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+                                                </svg></div>
+                                        </div>
+                                        <div class="CoamRb">
+                                            <div class="XZleqe sp"><svg class="Pmm3mc" style="fill:currentColor"
+                                                    viewBox="0 0 24 24">
+                                                    <path
+                                                        d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+                                                </svg></div>
+                                            <div class="TpcqSc"><svg class="Pmm3mc" style="fill:currentColor"
+                                                    viewBox="0 0 24 24">
+                                                    <path
+                                                        d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+                                                </svg></div>
+                                        </div>
+                                        <div class="P0eG7b">4 months ago</div>
+                                        <div role="button" class="U26fgb JRtysb WzwrXb" jscontroller="iSvg6e"
+                                            jsaction="click:cOuCgd; mousedown:UX7yZ; mouseup:lbsD7e; mouseenter:tfO1Yc; mouseleave:JywGue; focus:AHmuwe; blur:O22p3e; contextmenu:mg9Pef;touchstart:p6p2H; touchmove:FwuNnf; touchend:yfqBxc(preventMouseEvents=true|preventDefault=true); touchcancel:JMtRjd;;keydown:I481le;"
+                                            jsshadow aria-disabled="false" tabindex="0" aria-haspopup="true"
+                                            aria-expanded="false" data-alignright="true">
+                                            <div class="NWlf3e MbhUzd" jsname="ksKsZd"></div><span jsslot
+                                                class="MhXXcc oJeWuf"><span class="Lw7GHd snByac"><span class="DPvwYc"
+                                                        aria-hidden="true">&#xE5D4;</span></span></span>
+                                            <div jsname="xl07Ob" style="display:none" aria-hidden="true">
+                                                <div class="JPdR6b" jscontroller="uY3Nvd"
+                                                    jsaction="IpSVtb:TvD9Pc;fEN2Ze:xzS4ub;frq95c:LNeFm;cFpp9e:J9oOtd; click:H8nU8b; mouseup:H8nU8b; keydown:I481le; keypress:Kr2w4b; blur:O22p3e; focus:H8nU8b"
+                                                    role="menu" tabindex="0" jsshadow>
+                                                    <div class="XvhY1d" jsaction="mousedown:p8EH2c; touchstart:p8EH2c;">
+                                                        <div class="JAPqpe K0NPx"><span jsslot class="z80M1"
+                                                                jsaction="click:o6ZaF(preventDefault=true); mousedown:lAhnzb; mouseup:Osgxgf; mouseenter:SKyDAe; mouseleave:xq3APb;touchstart:jJiBRc; touchmove:kZeBdd; touchend:VfAz8(preventMouseEvents=true)"
+                                                                jsname="j7LFlb" aria-label="Flag as inappropriate"
+                                                                role="menuitem" tabindex="-1">
+                                                                <div class="aBBjbd MbhUzd" jsname="ksKsZd"></div>
+                                                                <div class="uyYuVb oJeWuf" jscontroller="hr05tc"
+                                                                    jsaction="click:FNFY6c" data-target="_blank"
+                                                                    data-href="https://www.google.com/local/review/rap/report?postId=ChdDSUhNMG9nS0VJQ0FnSUR5aE5YaDJnRRAB&amp;entityid=ChdDSUhNMG9nS0VJQ0FnSUR5aE5YaDJnRRotChZDSUhNMG9nS0VJQ0FnSUR5aE5YaE9nEhNDZ3dJeTliWWdRWVE0TzJWaWdNIhIJVwBda9BxAjoRBYhvbcdLlaAqE0Nnd0l5OWJZZ1FZUTRPMlZpZ00&amp;wv=1&amp;s=131">
+                                                                    <div class="jO7h3c">Flag as inappropriate</div>
+                                                                </div>
+                                                            </span></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div><cite class="YSOJuc CoIOBe">- Gravity D</cite>
+                                </div>
+                                <div class="iTushb">
+                                    <div class="zGTRLd">
+                                        <div class="CoamRb">
+                                            <div class="XZleqe sp"><svg class="Pmm3mc" style="fill:currentColor"
+                                                    viewBox="0 0 24 24">
+                                                    <path
+                                                        d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+                                                </svg></div>
+                                            <div class="TpcqSc"><svg class="Pmm3mc" style="fill:currentColor"
+                                                    viewBox="0 0 24 24">
+                                                    <path
+                                                        d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+                                                </svg></div>
+                                        </div>
+                                        <div class="CoamRb">
+                                            <div class="XZleqe sp"><svg class="Pmm3mc" style="fill:currentColor"
+                                                    viewBox="0 0 24 24">
+                                                    <path
+                                                        d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+                                                </svg></div>
+                                            <div class="TpcqSc"><svg class="Pmm3mc" style="fill:currentColor"
+                                                    viewBox="0 0 24 24">
+                                                    <path
+                                                        d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+                                                </svg></div>
+                                        </div>
+                                        <div class="CoamRb">
+                                            <div class="XZleqe sp"><svg class="Pmm3mc" style="fill:currentColor"
+                                                    viewBox="0 0 24 24">
+                                                    <path
+                                                        d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+                                                </svg></div>
+                                            <div class="TpcqSc"><svg class="Pmm3mc" style="fill:currentColor"
+                                                    viewBox="0 0 24 24">
+                                                    <path
+                                                        d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+                                                </svg></div>
+                                        </div>
+                                        <div class="CoamRb">
+                                            <div class="XZleqe sp"><svg class="Pmm3mc" style="fill:currentColor"
+                                                    viewBox="0 0 24 24">
+                                                    <path
+                                                        d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+                                                </svg></div>
+                                            <div class="TpcqSc"><svg class="Pmm3mc" style="fill:currentColor"
+                                                    viewBox="0 0 24 24">
+                                                    <path
+                                                        d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+                                                </svg></div>
+                                        </div>
+                                        <div class="CoamRb">
+                                            <div class="XZleqe sp"><svg class="Pmm3mc" style="fill:currentColor"
+                                                    viewBox="0 0 24 24">
+                                                    <path
+                                                        d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+                                                </svg></div>
+                                            <div class="TpcqSc"><svg class="Pmm3mc" style="fill:currentColor"
+                                                    viewBox="0 0 24 24">
+                                                    <path
+                                                        d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+                                                </svg></div>
+                                        </div>
+                                        <div class="P0eG7b">9 months ago</div>
+                                        <div role="button" class="U26fgb JRtysb WzwrXb" jscontroller="iSvg6e"
+                                            jsaction="click:cOuCgd; mousedown:UX7yZ; mouseup:lbsD7e; mouseenter:tfO1Yc; mouseleave:JywGue; focus:AHmuwe; blur:O22p3e; contextmenu:mg9Pef;touchstart:p6p2H; touchmove:FwuNnf; touchend:yfqBxc(preventMouseEvents=true|preventDefault=true); touchcancel:JMtRjd;;keydown:I481le;"
+                                            jsshadow aria-disabled="false" tabindex="0" aria-haspopup="true"
+                                            aria-expanded="false" data-alignright="true">
+                                            <div class="NWlf3e MbhUzd" jsname="ksKsZd"></div><span jsslot
+                                                class="MhXXcc oJeWuf"><span class="Lw7GHd snByac"><span class="DPvwYc"
+                                                        aria-hidden="true">&#xE5D4;</span></span></span>
+                                            <div jsname="xl07Ob" style="display:none" aria-hidden="true">
+                                                <div class="JPdR6b" jscontroller="uY3Nvd"
+                                                    jsaction="IpSVtb:TvD9Pc;fEN2Ze:xzS4ub;frq95c:LNeFm;cFpp9e:J9oOtd; click:H8nU8b; mouseup:H8nU8b; keydown:I481le; keypress:Kr2w4b; blur:O22p3e; focus:H8nU8b"
+                                                    role="menu" tabindex="0" jsshadow>
+                                                    <div class="XvhY1d" jsaction="mousedown:p8EH2c; touchstart:p8EH2c;">
+                                                        <div class="JAPqpe K0NPx"><span jsslot class="z80M1"
+                                                                jsaction="click:o6ZaF(preventDefault=true); mousedown:lAhnzb; mouseup:Osgxgf; mouseenter:SKyDAe; mouseleave:xq3APb;touchstart:jJiBRc; touchmove:kZeBdd; touchend:VfAz8(preventMouseEvents=true)"
+                                                                jsname="j7LFlb" aria-label="Flag as inappropriate"
+                                                                role="menuitem" tabindex="-1">
+                                                                <div class="aBBjbd MbhUzd" jsname="ksKsZd"></div>
+                                                                <div class="uyYuVb oJeWuf" jscontroller="hr05tc"
+                                                                    jsaction="click:FNFY6c" data-target="_blank"
+                                                                    data-href="https://www.google.com/local/review/rap/report?postId=ChdDSUhNMG9nS0VJQ0FnSURDM0p6dWpnRRAB&amp;entityid=ChdDSUhNMG9nS0VJQ0FnSURDM0p6dWpnRRotChZDSUhNMG9nS0VJQ0FnSURDM0p6dVRnEhNDZ3dJLXRDUy13VVFrUEhtM3dJIhIJVwBda9BxAjoRBYhvbcdLlaAqE0Nnd0ktdENTLXdVUWtQSG0zd0k&amp;wv=1&amp;s=131">
+                                                                    <div class="jO7h3c">Flag as inappropriate</div>
+                                                                </div>
+                                                            </span></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div><cite class="YSOJuc CoIOBe">- ANIRBAN M</cite>
+                                </div>
+                            </div>
+                            <div class="aPrNKd"><a class="PDllHc dogP7c" jslog="66412; track:impression,click;"
+                                    href="https://search.google.com/local/writereview?placeid=ChIJVwBda9BxAjoRBYhvbcdLlaA"
+                                    rel="noreferrer">Write a Review</a><a class="PDllHc dogP7c"
+                                    jslog="66413; track:impression,click;"
+                                    href="https://search.google.com/local/reviews?placeid=ChIJVwBda9BxAjoRBYhvbcdLlaA"
+                                    rel="noreferrer">Read More</a></div>
+                        </div>
+                        <div class="b0t70b" id="gallery" jslog="64602; track:impression" data-panel="gallery-panel">
+                            <div class="y72IR">
+                                <hr class="WUdCTb" />
+                                <h2 class="Igsabe">Gallery</h2>
+                            </div>
+                            <div class="goIW2">
+                                <div class="UCecQ">
+                                    <div class="PWqJSb ZdKHsd"><a
+                                            href="http://www.google.com/maps/uv?pb=!1s0x3a0271d06b5d0057:0xa0954bc76d6f8805!3m1!7e131!5sCalcutta+Medical+Stores&amp;hl=en-GB&amp;imagekey=!1e3!2s-qgIFP6GEo8A%2FX2lUV23lDJI%2FAAAAAAAAAAk%2FerYbra_FU9URXDU9pn1tVkF9eG6fvZZDwCNwBGAYYCw"
+                                            class="oYxtQd" target="_blank">
+                                            <picture aria-label="Business photo">
+                                                <source media="(min-width: 768px)"
+                                                    srcset="https://lh3.googleusercontent.com/7IgG7rh5kId_12jYoEVXf7Pui_VZD2jGzs8ASlRxaX_Hbsoz0t3DLbEfNw-qtdtDaZKiufdT0Xb9_r-p=w960-h960-n-o-v1">
+                                                <img class="d11Ssd"
+                                                    src="https://lh3.googleusercontent.com/7IgG7rh5kId_12jYoEVXf7Pui_VZD2jGzs8ASlRxaX_Hbsoz0t3DLbEfNw-qtdtDaZKiufdT0Xb9_r-p=w768-h768-n-o-v1" />
+                                            </picture>
+                                        </a></div>
+                                    <div class="PWqJSb ZdKHsd"><a
+                                            href="http://www.google.com/maps/uv?pb=!1s0x3a0271d06b5d0057:0xa0954bc76d6f8805!3m1!7e131!5sCalcutta+Medical+Stores&amp;hl=en-GB&amp;imagekey=!1e3!2s-UaFTD_M1nd0%2FX2lUUb8ik5I%2FAAAAAAAAAAk%2Fj79OPK7cBTomfaKycYDiCGlyx2BW_gTkQCNwBGAYYCw"
+                                            class="oYxtQd" target="_blank">
+                                            <picture aria-label="Business photo">
+                                                <source media="(min-width: 768px)"
+                                                    srcset="https://lh3.googleusercontent.com/SZOwEwShj6X7XGIbbVxhT9B5GwUk0xk7_yYcIx5HXY1IooO0bXmYYL9TdFtW2VbVUpdNcqxPhUf4KSGM=w960-h960-n-o-v1">
+                                                <img class="d11Ssd"
+                                                    src="https://lh3.googleusercontent.com/SZOwEwShj6X7XGIbbVxhT9B5GwUk0xk7_yYcIx5HXY1IooO0bXmYYL9TdFtW2VbVUpdNcqxPhUf4KSGM=w768-h768-n-o-v1" />
+                                            </picture>
+                                        </a></div>
+                                    <div class="PWqJSb ZdKHsd"><a
+                                            href="http://www.google.com/maps/uv?pb=!1s0x3a0271d06b5d0057:0xa0954bc76d6f8805!3m1!7e131!5sCalcutta+Medical+Stores&amp;hl=en-GB&amp;imagekey=!1e3!2s-pNk43TbhHPs%2FX2lUTHanokI%2FAAAAAAAAAAk%2FRCLsp_mZeGMQN-DqvARZpnID_G6j2DCMgCNwBGAYYCw"
+                                            class="oYxtQd" target="_blank">
+                                            <picture aria-label="Business photo">
+                                                <source media="(min-width: 768px)"
+                                                    srcset="https://lh3.googleusercontent.com/iQTCc4NKZNff58s77edr9IdYKizxyT1snmjrN5-H_Txt-2n0IVyzAarvmwNuIfzsCEW1nQBZ1Uiy-KI-=w960-h960-n-o-v1">
+                                                <img class="d11Ssd"
+                                                    src="https://lh3.googleusercontent.com/iQTCc4NKZNff58s77edr9IdYKizxyT1snmjrN5-H_Txt-2n0IVyzAarvmwNuIfzsCEW1nQBZ1Uiy-KI-=w768-h768-n-o-v1" />
+                                            </picture>
+                                        </a></div>
+                                    <div class="PWqJSb ZdKHsd"><a
+                                            href="http://www.google.com/maps/uv?pb=!1s0x3a0271d06b5d0057:0xa0954bc76d6f8805!3m1!7e131!5sCalcutta+Medical+Stores&amp;hl=en-GB&amp;imagekey=!1e3!2s-gVSaG6RgnhA%2FX2lURguaYCI%2FAAAAAAAAAAk%2FSZze9xuCsMA5jYi5mMDPGJYgQV8XLO4QQCNwBGAYYCw"
+                                            class="oYxtQd" target="_blank">
+                                            <picture aria-label="Business photo">
+                                                <source media="(min-width: 768px)"
+                                                    srcset="https://lh3.googleusercontent.com/UdFkR6KTj3Uc5xC-KsUZwOn6SXWg94LES5uyjL1CT5gZ2hfR1ZQtuxdH3VvXYc8wEdiqMNI7jlQiwcmJ=w960-h960-n-o-v1">
+                                                <img class="d11Ssd"
+                                                    src="https://lh3.googleusercontent.com/UdFkR6KTj3Uc5xC-KsUZwOn6SXWg94LES5uyjL1CT5gZ2hfR1ZQtuxdH3VvXYc8wEdiqMNI7jlQiwcmJ=w768-h768-n-o-v1" />
+                                            </picture>
+                                        </a></div>
+                                    <div class="PWqJSb ZdKHsd"><a
+                                            href="http://www.google.com/maps/uv?pb=!1s0x3a0271d06b5d0057:0xa0954bc76d6f8805!3m1!7e131!5sCalcutta+Medical+Stores&amp;hl=en-GB&amp;imagekey=!1e3!2s-y97UdAUba3Q%2FX2lUQLQy9cI%2FAAAAAAAAAAk%2FBlaNdi2NSYoE-AHv-e8p56WvbQ3jk9ITQCNwBGAYYCw"
+                                            class="oYxtQd" target="_blank">
+                                            <picture aria-label="Business photo">
+                                                <source media="(min-width: 768px)"
+                                                    srcset="https://lh3.googleusercontent.com/nPDVKpwPuYm9RrYXl-o7sct84LEajt8IxiLzP8uID2bRS6J8b-UVhHHqGHILPSxHzqn75eUNCw1SwX3e=w960-h960-n-o-v1">
+                                                <img class="d11Ssd"
+                                                    src="https://lh3.googleusercontent.com/nPDVKpwPuYm9RrYXl-o7sct84LEajt8IxiLzP8uID2bRS6J8b-UVhHHqGHILPSxHzqn75eUNCw1SwX3e=w768-h768-n-o-v1" />
+                                            </picture>
+                                        </a></div>
+                                    <div class="PWqJSb ZdKHsd"><a
+                                            href="http://www.google.com/maps/uv?pb=!1s0x3a0271d06b5d0057:0xa0954bc76d6f8805!3m1!7e131!5sCalcutta+Medical+Stores&amp;hl=en-GB&amp;imagekey=!1e3!2s-RP190QmiOK8%2FX2lUOlgALJI%2FAAAAAAAAAAk%2FQOTuMPpMy0EAOzEyGYqST53DS6ft-gafgCNwBGAYYCw"
+                                            class="oYxtQd" target="_blank">
+                                            <picture aria-label="Business photo">
+                                                <source media="(min-width: 768px)"
+                                                    srcset="https://lh3.googleusercontent.com/fMYp8LeQelA-ZqZNqZScMJ64VvWq_WG24v5ch5dm6KJdP6blmxQMkht6gnYuI8jM1nD6WUC6y5dDKc6R=w960-h960-n-o-v1">
+                                                <img class="d11Ssd"
+                                                    src="https://lh3.googleusercontent.com/fMYp8LeQelA-ZqZNqZScMJ64VvWq_WG24v5ch5dm6KJdP6blmxQMkht6gnYuI8jM1nD6WUC6y5dDKc6R=w768-h768-n-o-v1" />
+                                            </picture>
+                                        </a></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="details" data-panel="business-details-panel" class="IJMoHc b0t70b"
+                            jslog="59796; track:impression">
+                            <hr class="WUdCTb" />
+                            <h2 class="Igsabe">Contact Us</h2>
+                            <div class="IQ1KEb" jslog="56034; track:impression,click"><a
+                                    href="https://www.google.com/maps/place/Calcutta+Medical+Stores/data=!3m1!4b1!4m2!3m1!1s0x3a0271d06b5d0057:0xa0954bc76d6f8805"
+                                    target="_blank" itemprop="hasMap" data-tracking-element-type="7">
+                                    <div class="QMbmRe"
+                                        style="background-image:url('https://maps.googleapis.com/maps/api/staticmap?scale=1&amp;size=1600x900&amp;style=feature:poi.business|visibility:off&amp;style=feature:water|visibility:simplified&amp;style=feature:road|element:labels.icon|visibility:off&amp;style=feature:road.highway|element:labels|saturation:-90|lightness:25&amp;format=jpg&amp;language=en-GB&amp;region=IN&amp;markers=color:0x88b06a|22.4966119,88.3836299&amp;zoom=16&amp;client=google-presto&amp;signature=3ECI4KxS0bOYAer5YNy5hMw3fec')"
+                                        title="Map showing business location."></div>
+                                </a></div>
+                            <div class="fGZQDc">
+                                <div class="kCmrbf">
+                                    <h3 class="Gou21b">Contact</h3>
+                                    <div data-field="phone"><a class="PDvGL q8cvFf" href="tel:+91-90516-55355"
+                                            data-tracking-element-type=3 jslog="56037; track:impression,click"
+                                            itemprop="telephone" dir="ltr">Call now</a>
+                                        <ul class="R7Di0e">
+                                            <li dir="ltr">090516 55355</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="kCmrbf">
+                                    <h3 class="Gou21b">Address</h3>
+                                    <div data-field="address"><a class="PDvGL q8cvFf"
+                                            href="https://www.google.com/maps/dir//Calcutta+Medical+Stores/data=!4m8!4m7!1m0!1m5!1m1!1s0x3a0271d06b5d0057:0xa0954bc76d6f8805!2m2!1d88.3836299!2d22.496611899999998"
+                                            target="_blank" data-tracking-element-type=6
+                                            jslog="56039; track:impression,click">Get directions</a>
+                                        <address class="qhkvMe " itemprop="address">
+                                            <div>45/1,GARFA SITALA MANDIR ROAD</div>
+                                            <div>Near Balak Samity Club</div>
+                                            <div>KOLKATA, West Bengal 700075</div>
+                                            <div>India</div>
+                                        </address>
+                                    </div>
+                                </div>
+                                <div class="kCmrbf">
+                                    <h3 class="Gou21b">Opening Hours</h3>
+                                    <div>
+                                        <table itemprop="openingHours">
+                                            <tr>
+                                                <th class="x2TOCf">Mon:</th>
+                                                <td class="o0m3Qb"><span class="WF8WNe">9:00 am – 9:00 pm</span></td>
+                                            </tr>
+                                            <tr>
+                                                <th class="x2TOCf">Tue:</th>
+                                                <td class="o0m3Qb"><span class="WF8WNe">9:00 am – 9:00 pm</span></td>
+                                            </tr>
+                                            <tr>
+                                                <th class="x2TOCf">Wed:</th>
+                                                <td class="o0m3Qb"><span class="WF8WNe">9:00 am – 9:00 pm</span></td>
+                                            </tr>
+                                            <tr>
+                                                <th class="x2TOCf">Thu:</th>
+                                                <td class="o0m3Qb"><span class="WF8WNe">9:00 am – 9:00 pm</span></td>
+                                            </tr>
+                                            <tr>
+                                                <th class="x2TOCf">Fri:</th>
+                                                <td class="o0m3Qb"><span class="WF8WNe">9:00 am – 9:00 pm</span></td>
+                                            </tr>
+                                            <tr>
+                                                <th class="x2TOCf">Sat:</th>
+                                                <td class="o0m3Qb"><span class="WF8WNe">9:00 am – 9:00 pm</span></td>
+                                            </tr>
+                                            <tr>
+                                                <th class="x2TOCf">Sun:</th>
+                                                <td class="o0m3Qb"><span class="WF8WNe">9:00 am – 8:00 pm</span></td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
 
                                                     <div _ngcontent-sc64="" class="column">
                                                         <h4 _ngcontent-sc64="" translate="" keyname="landing.footer.operating-hours" class="h5 color-dark font-semibold">Pharmacy Operating Hours
