@@ -113,7 +113,7 @@
 
                 <li class="has-sub nav-item"><a href="#"><i class="ft-image"></i><span data-i18n="" class="menu-title">Banner 1</span></a>
                     <ul class="menu-content">
-                        <li><a href="banner.php" class="menu-item">Add Banner</a>
+                        <li><a href="ban.php" class="menu-item">Add Banner</a>
                         </li>
                         <li><a href="bannerlist.php" class="menu-item">Banner List</a>
                         </li>

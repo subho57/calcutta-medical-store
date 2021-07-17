@@ -6,19 +6,26 @@ require 'include/header.php';
 	<div class="layer"></div>
 	<!-- ////////////////////////////////////////////////////////////////////////////-->
 	<div class="wrapper">
+
+
 		<!-- main menu-->
 		<!--.main-menu(class="#{menuColor} #{menuOpenType}", class=(menuShadow == true ? 'menu-shadow' : ''))-->
 		<?php include('main.php'); ?>
 		<!-- Navbar (Header) Ends-->
+
 		<div class="main-panel">
 			<div class="main-content">
 				<div class="content-wrapper">
 					<!--Statistics cards Starts-->
+
+
+
 					<div class="row">
 						<div class="col-md-12">
 							<div class="card">
 								<div class="card-header">
 									<h4 class="card-title" id="basic-layout-form">Add 1st Banner</h4>
+
 								</div>
 								<div class="card-body">
 									<div class="px-3">
@@ -28,6 +35,11 @@ require 'include/header.php';
 										?>
 											<form class="form" action="#" method="post" enctype="multipart/form-data">
 												<div class="form-body">
+
+
+
+
+
 													<div class="form-group">
 														<label for="cname">Edit Banner Image</label>
 														<input type="file" id="pimg" class="form-control" placeholder="Enter Banner Image" name="pimg">
@@ -35,10 +47,11 @@ require 'include/header.php';
 													</div>
 													<div class="card-header">
 														<h4 class="card-title" id="basic-layout-form">⚠ Leave the subcategory unlinked, if you want to link category only❗ ELSE LINK BOTH. ❗❗</h4>
+
 													</div>
 													<div class="form-group">
 														<label for="cname">Link With Category? (Optional)</label>
-														<select id="cat_change" class="form-control" name="cat">
+														<select class="form-control" name="cat">
 															<option value="0">Remove Category Linkage</option>
 															<?php
 															$sp = $con->query("select * from category order by catname");
@@ -53,7 +66,7 @@ require 'include/header.php';
 
 													<div class="form-group">
 														<label for="cname">Link With Subcategory? (Optional)</label>
-														<select id="sub_list" class="form-control" name="scat">
+														<select id="cat_change" id="sub_list" class="form-control" name="scat">
 															<option value="0">Remove Subcategory Linkage</option>
 															<?php
 															$sp = $con->query("select * from subcategory where cat_id=" . $bdata['cid'] . " order by name");
@@ -65,9 +78,13 @@ require 'include/header.php';
 															<?php } ?>
 														</select>
 													</div>
+
+
+
 												</div>
 
 												<div class="form-actions">
+
 													<button type="submit" name="edit_product" class="btn btn-raised btn-raised btn-primary">
 														<i class="fa fa-check-square-o"></i> Update Banner
 													</button>
@@ -166,7 +183,6 @@ require 'include/header.php';
 														<label for="cname">Link With Subcategory? (Optional)</label>
 														<select id="sub_list" class="form-control" name="scat">
 															<option value="0">Do Not Link Subcategory</option>
-
 														</select>
 													</div>
 
