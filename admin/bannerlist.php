@@ -65,7 +65,7 @@ require 'include/header.php';
                                                                 } ?></td>
                                                             <td>
 
-                                                                <a class="primary" href="banner.php?edit=<?php echo $rkl['id']; ?>" data-original-title="" title="">
+                                                                <a class="primary" href="ban.php?edit=<?php echo $rkl['id']; ?>" data-original-title="" title="">
                                                                     <i class="ft-edit font-medium-3"></i>
                                                                 </a>
 
