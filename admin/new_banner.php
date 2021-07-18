@@ -51,7 +51,7 @@ require 'include/header.php';
 													</div>
 													<div class="form-group">
 														<label for="cname">Link With Category? (Optional)</label>
-														<select class="form-control" name="cat">
+														<select id="cat_change" class="form-control" name="cat">
 															<option value="0">Remove Category Linkage</option>
 															<?php
 															$sp = $con->query("select * from category order by catname");
@@ -66,7 +66,7 @@ require 'include/header.php';
 
 													<div class="form-group">
 														<label for="cname">Link With Subcategory? (Optional)</label>
-														<select id="cat_change" id="sub_list" class="form-control" name="scat">
+														<select id="sub_list" class="form-control" name="scat">
 															<option value="0">Remove Subcategory Linkage</option>
 															<?php
 															$sp = $con->query("select * from subcategory where cat_id=" . $bdata['cid'] . " order by name");
@@ -226,33 +226,6 @@ require 'include/header.php';
 						}
 						?>
 					</div>
-
-
-
-
-					<script>
-						// Code to get duration of audio /video file before upload - from: http://coursesweb.net/
-
-						//register canplaythrough event to #audio element to can get duration
-						var f_duration = 0; //store duration
-						document.getElementById('audio').addEventListener('canplaythrough', function(e) {
-							//add duration in the input field #f_du
-							f_duration = Math.round(e.currentTarget.duration);
-							document.getElementById('f_du').value = f_duration;
-							URL.revokeObjectURL(obUrl);
-						});
-
-						//when select a file, create an ObjectURL with the file and add it in the #audio element
-						var obUrl;
-						document.getElementById('f_up').addEventListener('change', function(e) {
-							var file = e.currentTarget.files[0];
-							//check file extension for audio/video type
-							if (file.name.match(/\.(avi|mp3|mp4|mpeg|ogg)$/i)) {
-								obUrl = URL.createObjectURL(file);
-								document.getElementById('audio').setAttribute('src', obUrl);
-							}
-						});
-					</script>
 
 
 
