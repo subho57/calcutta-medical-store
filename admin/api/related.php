@@ -6,10 +6,10 @@ $data = json_decode(file_get_contents('php://input'), true);
 if ($data['pid'] != '') {
 
     $pid = $data['pid'];
-    $query = $con->query("select * from product where id=" . $pid . "")->fetch_assoc();
+    $query = $con->query("select cid, sid from product where id=" . $pid)->fetch_assoc();
     $cid = $query['cid'];
     $sid = $query['sid'];
-    $counter = $con->query("select * from product where cid=" . $cid . " and sid=" . $sid . " and id!=" . $pid . " and status=1");
+    $counter = $con->query("select * from product where cid=" . $cid . " and id!=" . $pid . " and status=1");
     if ($counter->num_rows != 0) {
         $result = array();
         $pp = array();
