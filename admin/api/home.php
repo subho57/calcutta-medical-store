@@ -23,7 +23,7 @@ if ($uid == '') {
         $new_v[] = $row;
     }
 
-    $sels = $con->query("select * from category limit 8");
+    $sels = $con->query("select * from category where catname IN('Offer Zone', 'Cosmetics 18% GST', 'Food Products 18% GST', 'Medicine 18% GST', 'Surgical 18% GST') order by id desc");
     while ($rows = $sels->fetch_assoc()) {
         $p['id'] = $rows['id'];
         $p['catname'] = $rows['catname'];
