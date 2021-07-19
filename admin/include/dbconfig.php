@@ -15,7 +15,7 @@ if (session_status() == PHP_SESSION_NONE) {
 /**
  * Change these details according to your server
  */
-$server = "localhost";
+$server = "sql449.main-hosting.eu";
 $username = "u261452081_calcuttamedic";
 $password = "CalcuttaMedicalStores@123";
 $database = "u261452081_calcuttamedic";
