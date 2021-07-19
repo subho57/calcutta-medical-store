@@ -154,16 +154,16 @@ if ($data['uid'] == '') {
   $mail = new PHPMailer();
   $mail->isSMTP();
   $mail->SMTPDebug = SMTP::DEBUG_OFF;
-  $mail->Host = 'smtp.gmail.com';
+  $mail->Host = 'smtp.hostinger.com';
   $mail->Port = 587;
-  $mail->SMTPSecure = true;
+  $mail->SMTPSecure = 'tls';
   $mail->SMTPAutoTLS = true;
   $mail->SMTPAuth = true;
   $mail->Username = API_EMAIL;
   $mail->Password = API_KEY;
   $mail->isHTML(true);
-  $mail->setFrom(API_EMAIL, 'Indian By Choice');
-  $mail->addReplyTo(API_EMAIL, 'Indian By Choice');
+  $mail->setFrom(API_EMAIL, 'Calcutta Medical Stores');
+  $mail->addReplyTo(API_EMAIL, 'Calcutta Medical Stores');
   $mail->addAddress($c['email'], $c['name']);
   $mail->Subject = "Your order " . $order['oid'] . " of " . $count . " item(s) has been placed.";
   $mail->msgHTML("<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Transitional//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd\">
@@ -326,7 +326,7 @@ if ($data['uid'] == '') {
                           <td align=\"center\" valign=\"top\" style=\"padding:0;Margin:0;width:520px\"> 
                            <table cellpadding=\"0\" cellspacing=\"0\" width=\"100%\" role=\"presentation\" style=\"mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px\"> 
                              <tr style=\"border-collapse:collapse\"> 
-                              <td align=\"left\" style=\"padding:0;Margin:0;padding-top:20px\"><p style=\"Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-size:12px;font-family:arial, 'helvetica neue', helvetica, sans-serif;line-height:21px;color:#333333\"><br>Thank you for your order. We thought you'd like to know that Indian By Choice is processing your item(s). We’ll send a confirmation once your order is ready. If you need to cancel&nbsp;an item from this order or manage other orders, please open Indian By Choice App.<br><br>Please note that a signature may be required for the delivery of the package.</p></td> 
+                              <td align=\"left\" style=\"padding:0;Margin:0;padding-top:20px\"><p style=\"Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-size:12px;font-family:arial, 'helvetica neue', helvetica, sans-serif;line-height:21px;color:#333333\"><br>Thank you for your order. We thought you'd like to know that Calcutta Medical Stores is processing your item(s). We’ll send a confirmation once your order is ready. If you need to cancel&nbsp;an item from this order or manage other orders, please open Calcutta Medical Stores App.<br><br>Please note that a signature may be required for the delivery of the package.</p></td> 
                              </tr> 
                            </table></td> 
                          </tr> 
@@ -421,7 +421,7 @@ if ($data['uid'] == '') {
                           <td align=\"center\" valign=\"top\" style=\"padding:0;Margin:0;width:520px\"> 
                            <table cellpadding=\"0\" cellspacing=\"0\" width=\"100%\" role=\"presentation\" style=\"mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px\"> 
                              <tr style=\"border-collapse:collapse\"> 
-                              <td align=\"left\" style=\"padding:0;Margin:0\"><p style=\"Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-size:14px;font-family:arial, 'helvetica neue', helvetica, sans-serif;line-height:21px;color:#333333\"><br><br>Track your order with the&nbsp;<a target=\"_blank\" style=\"-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-family:arial, 'helvetica neue', helvetica, sans-serif;font-size:14px;text-decoration:underline;color:#E23744\" href=\"https://play.google.com/store/apps/details?id=com.enestcustomerapp\">Indian By Choice&nbsp;App</a>.<br><br></p><p style=\"Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-size:14px;font-family:arial, 'helvetica neue', helvetica, sans-serif;line-height:21px;color:#333333\">We hope to see you again soon!<br><br><b>Indian By Choice</b><br><br></p></td> 
+                              <td align=\"left\" style=\"padding:0;Margin:0\"><p style=\"Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-size:14px;font-family:arial, 'helvetica neue', helvetica, sans-serif;line-height:21px;color:#333333\"><br><br>Track your order with the&nbsp;<a target=\"_blank\" style=\"-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-family:arial, 'helvetica neue', helvetica, sans-serif;font-size:14px;text-decoration:underline;color:#E23744\" href=\"https://play.google.com/store/apps/details?id=com.enestcustomerapp\">Calcutta Medical Stores&nbsp;App</a>.<br><br></p><p style=\"Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-size:14px;font-family:arial, 'helvetica neue', helvetica, sans-serif;line-height:21px;color:#333333\">We hope to see you again soon!<br><br><b>Calcutta Medical Stores</b><br><br></p></td> 
                              </tr> 
                              <tr style=\"border-collapse:collapse\"> 
                               <td align=\"center\" style=\"padding:20px;Margin:0;font-size:0\"> 
