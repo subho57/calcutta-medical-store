@@ -47,7 +47,7 @@ if (isset($_GET['success'])) {
 
     <link rel="stylesheet" type="text/css" href="assets/css/app.css">
     <!-- Subhankar Pal | @subho57 -->
-    <script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async=""></script>
+    <script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js"></script>
     <script>
         window.OneSignal = window.OneSignal || [];
         OneSignal.push(function() {
