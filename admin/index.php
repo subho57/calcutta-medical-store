@@ -37,17 +37,17 @@ if (!empty($_SESSION['username'])) {
         <link rel="stylesheet" type="text/css" href="assets/css/util.css">
         <link rel="stylesheet" type="text/css" href="assets/css/main.css">
         <!--===============================================================================================-->
-        <link href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.0.1/css/toastr.css" rel="stylesheet" />
+        <link href="assets/css/toastr.css" rel="stylesheet" />
         <!-- Subhankar Pal | @subho57 -->
         <!-- PWA Migration -->
         <link rel="manifest" href="manifest.webmanifest" />
-        <!-- <script>
+        <script>
         // load service worker
         "serviceWorker" in navigator && window.addEventListener("load", () => {
             navigator.serviceWorker.register("serviceWorker.js").then(e => console.log("Success: ", e.scope)).catch(e => console.log("Failure: ", e))
         });
-        </script> -->
-        <script type="module" src="https://cdn.jsdelivr.net/npm/@pwabuilder/pwainstall"></script>
+        </script>
+        <!-- <script type="module" src="https://cdn.jsdelivr.net/npm/@pwabuilder/pwainstall"></script>
         <script type="module">
             // This is the service worker with the Advanced caching
             /*
@@ -59,9 +59,9 @@ if (!empty($_SESSION['username'])) {
 
             const el = document.createElement('pwa-update');
             document.body.appendChild(el);
-        </script>
+        </script> -->
         <script src="assets/vendor/jquery/jquery-3.2.1.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.0.1/js/toastr.js"></script>
+        <script src="assets/js/toastr.min.js"></script>
 
     </head>
 

@@ -473,7 +473,7 @@
             (t.src = e), (t.async = !0), document.head.appendChild(t);
           }),
           (e.getPathAndPrefix = function () {
-            return "https://cdn.onesignal.com/sdks/";
+            return "";
           }),
           (e.isServiceWorkerRuntime = function () {
             return "undefined" == typeof window;

@@ -60,6 +60,13 @@
     <!-- Manifest links -->
     <link rel="manifest" href="/admin/manifest.webmanifest">
 
+    <script>
+        // load service worker
+        "serviceWorker" in navigator && window.addEventListener("load", () => {
+            navigator.serviceWorker.register("admin/serviceWorker.js").then(e => console.log("Success: ", e.scope)).catch(e => console.log("Failure: ", e))
+        });
+    </script>
+
     <!-- ms application meta tags -->
     <meta name="msapplication-TileColor" content="#4a44a0">
     <meta name="msapplication-TileImage" content="admin/<?php echo $fset['favicon']; ?>">
@@ -71,7 +78,7 @@
         {
             "@context": "https://schema.org",
             "@type": "Organization",
-            "url": "http://www.calcuttamedicalstores.com",
+            "url": "http://www.calcuttamedicalstore.in",
             "name": "<?php echo $fset['title']; ?>",
             "logo": "https://www.calcuttamedicalstore.in/admin/<?php echo $fset['favicon']; ?>",
             "sameAs": [
@@ -2122,7 +2129,7 @@
                                                         <!---->
                                                         <!---->
                                                     </div>
-                                                    
+
 
                                                     <div _ngcontent-sc64="" class="column">
                                                         <h4 _ngcontent-sc64="" translate="" keyname="landing.footer.operating-hours" class="h5 color-dark font-semibold">Pharmacy Operating Hours
