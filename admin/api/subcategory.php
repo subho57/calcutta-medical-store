@@ -6,8 +6,8 @@ if ($data['category_id'] == '') {
 } else {
     $cat_id = $data['category_id'];
 
-    $sel = $con->query("select * from subcategory where cat_id=" . $cat_id . "");
-    $count = $con->query("select * from subcategory where cat_id=" . $cat_id . "")->num_rows;
+    $sel = $con->query("select * from subcategory where cat_id=" . $cat_id . " order by name");
+    $count = $sel->num_rows;
     if ($count != 0) {
         $myarray = array();
         while ($row = $sel->fetch_assoc()) {
