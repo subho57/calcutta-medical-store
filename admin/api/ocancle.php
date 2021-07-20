@@ -70,16 +70,16 @@ if ($data['uid'] == '' or $data['oid'] == '') {
   $mail = new PHPMailer();
   $mail->isSMTP();
   $mail->SMTPDebug = SMTP::DEBUG_OFF;
-  $mail->Host = 'smtp.gmail.com';
+  $mail->Host = 'smtp.hostinger.com';
   $mail->Port = 587;
-  $mail->SMTPSecure = true;
+  $mail->SMTPSecure = 'tls';
   $mail->SMTPAutoTLS = true;
   $mail->SMTPAuth = true;
   $mail->Username = API_EMAIL;
   $mail->Password = API_KEY;
   $mail->isHTML(true);
-  $mail->setFrom(API_EMAIL, 'Indian By Choice');
-  $mail->addReplyTo(API_EMAIL, 'Indian By Choice');
+  $mail->setFrom(API_EMAIL, 'Calcutta Medical Stores');
+  $mail->addReplyTo(API_EMAIL, 'Calcutta Medical Stores');
   $mail->addAddress($c['email'], $c['name']);
   $mail->Subject = "Your order " . $order['oid'] . " has been cancelled.";
   $mail->msgHTML("<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Transitional//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd\">
@@ -146,7 +146,7 @@ if ($data['uid'] == '' or $data['oid'] == '') {
                           <td class=\"es-m-p20b\" align=\"center\" style=\"padding:0;Margin:0;width:204px\"> 
                            <table width=\"100%\" cellspacing=\"0\" cellpadding=\"0\" role=\"presentation\" style=\"mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px\"> 
                              <tr style=\"border-collapse:collapse\"> 
-                              <td class=\"es-m-txt-l\" align=\"left\" style=\"padding:0;Margin:0;font-size:0px\"><img src=\"../" . $fset['logo'] . "\" alt style=\"display:block;border:0;outline:none;text-decoration:none;-ms-interpolation-mode:bicubic\" width=\"103\" height=\"64\"></td> 
+                              <td class=\"es-m-txt-l\" align=\"left\" style=\"padding:0;Margin:0;font-size:0px\"><img src=\"https://admin.calcuttamedicalstore.in/" . $fset['logo'] . "\" alt style=\"display:block;border:0;outline:none;text-decoration:none;-ms-interpolation-mode:bicubic\" width=\"103\" height=\"103\"></td> 
                              </tr> 
                            </table></td> 
                           <td class=\"es-hidden\" style=\"padding:0;Margin:0;width:5px\"></td> 
@@ -242,7 +242,7 @@ if ($data['uid'] == '' or $data['oid'] == '') {
                           <td align=\"center\" valign=\"top\" style=\"padding:0;Margin:0;width:520px\"> 
                            <table cellpadding=\"0\" cellspacing=\"0\" width=\"100%\" role=\"presentation\" style=\"mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px\"> 
                              <tr style=\"border-collapse:collapse\"> 
-                              <td align=\"left\" style=\"padding:0;Margin:0;padding-top:20px\"><p style=\"Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-size:12px;font-family:arial, 'helvetica neue', helvetica, sans-serif;line-height:21px;color:#333333\"><br>Your Order has been cancelled. To manage other orders, please open Indian By Choice App.<br><br></p></td> 
+                              <td align=\"left\" style=\"padding:0;Margin:0;padding-top:20px\"><p style=\"Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-size:12px;font-family:arial, 'helvetica neue', helvetica, sans-serif;line-height:21px;color:#333333\"><br>Your Order has been cancelled. To manage other orders, please open Calcutta Medical Stores App.<br><br></p></td> 
                              </tr> 
                            </table></td> 
                          </tr> 
@@ -309,7 +309,7 @@ if ($data['uid'] == '' or $data['oid'] == '') {
                           <td align=\"center\" valign=\"top\" style=\"padding:0;Margin:0;width:520px\"> 
                            <table cellpadding=\"0\" cellspacing=\"0\" width=\"100%\" role=\"presentation\" style=\"mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px\"> 
                              <tr style=\"border-collapse:collapse\"> 
-                              <td align=\"left\" style=\"padding:0;Margin:0\"><p style=\"Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-size:12px;font-family:arial, 'helvetica neue', helvetica, sans-serif;line-height:21px;color:#333333\"><br><br>Manage other orders with the&nbsp;<a target=\"_blank\" style=\"-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-family:arial, 'helvetica neue', helvetica, sans-serif;font-size:14px;text-decoration:underline;color:#E23744\" href=\"https://play.google.com/store/apps/details?id=com.indianbychoice\">Indian By Choice</a>.<br><br></p><p style=\"Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-size:14px;font-family:arial, 'helvetica neue', helvetica, sans-serif;line-height:21px;color:#333333\">We hope to see you again soon!<br><br><b>Indian By Choice</b><br><br></p></td> 
+                              <td align=\"left\" style=\"padding:0;Margin:0\"><p style=\"Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-size:12px;font-family:arial, 'helvetica neue', helvetica, sans-serif;line-height:21px;color:#333333\"><br><br>Manage other orders with the&nbsp;<a target=\"_blank\" style=\"-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-family:arial, 'helvetica neue', helvetica, sans-serif;font-size:14px;text-decoration:underline;color:#E23744\" href=\"https://play.google.com/store/apps/details?id=in.calcuttamedicalstore\">Calcutta Medical Stores</a>.<br><br></p><p style=\"Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-size:14px;font-family:arial, 'helvetica neue', helvetica, sans-serif;line-height:21px;color:#333333\">We hope to see you again soon!<br><br><b>Calcutta Medical Stores</b><br><br></p></td> 
                              </tr> 
                              <tr style=\"border-collapse:collapse\"> 
                               <td align=\"center\" style=\"padding:20px;Margin:0;font-size:0\"> 
@@ -358,7 +358,7 @@ if ($data['uid'] == '' or $data['oid'] == '') {
 
   Please provide us with a feedback in the App.
 
-  Indian By Choice.
+  Calcutta Medical Stores.
   ";
   $mail->send();
 }
