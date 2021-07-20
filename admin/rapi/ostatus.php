@@ -26,7 +26,7 @@ if ($oid == '' or $status == '' or $rid == '') {
 	$oid = strip_tags(mysqli_real_escape_string($con, $oid));
 	$rid = strip_tags(mysqli_real_escape_string($con, $rid));
 	$status = strip_tags(mysqli_real_escape_string($con, $status));
-	$check = $con->query("select *  from orders where rid=" . $rid . " and id=" . $oid . "")->num_rows;
+	$check = $con->query("select * from orders where rid=" . $rid . " and id=" . $oid . " and status != 'cancelled'")->num_rows;
 	if ($check != 0) {
 
 		// PHP Mailer Integration for cancellation
@@ -87,10 +87,6 @@ if ($oid == '' or $status == '' or $rid == '') {
 				'headings' => $heading,
 				'contents' => $content
 			);
-			curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($fields));
-			curl_exec($ch);
-			curl_close($ch);
-
 			$returnArr = array("ResponseCode" => "200", "Result" => "true", "ResponseMsg" => "Order Accepted Successfully!!!!!");
 		} else if ($status == 'reject') {
 			$con->query("update orders set a_status=5,r_status='Rejected',rid=0 where id=" . $oid . "");
@@ -114,10 +110,6 @@ if ($oid == '' or $status == '' or $rid == '') {
 				'headings' => $heading,
 				'contents' => $content
 			);
-			curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($fields));
-			curl_exec($ch);
-			curl_close($ch);
-
 
 			$returnArr = array("ResponseCode" => "200", "Result" => "true", "ResponseMsg" => "Order Cancelled Successfully!!!");
 
@@ -394,7 +386,6 @@ if ($oid == '' or $status == '' or $rid == '') {
 				 </body>
 				</html>"
 			);
-			$mail->send();
 		} else if ($status == 'complete') {
 			$sign = $data['sign'];
 			$con->query("update orders set a_status=3,r_status='Delivered',status='completed',photo='" . $sign . "' where id=" . $oid . "");
@@ -414,9 +405,6 @@ if ($oid == '' or $status == '' or $rid == '') {
 				'headings' => $heading,
 				'contents' => $content
 			);
-			curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($fields));
-			curl_exec($ch);
-			curl_close($ch);
 
 			$returnArr = array("ResponseCode" => "200", "Result" => "true", "ResponseMsg" => "Order Completed Successfully!!!");
 
@@ -1255,10 +1243,15 @@ if ($oid == '' or $status == '' or $rid == '') {
 			  
 			  </html>"
 			);
-			$mail->send();
 		} else {
 			$returnArr = array("ResponseCode" => "401", "Result" => "false", "ResponseMsg" => "Something Went wrong  try again !");
 		}
+
+		curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($fields));
+		curl_exec($ch);
+		curl_close($ch);
+
+		$mail->send();
 	} else {
 		$returnArr = array("ResponseCode" => "401", "Result" => "false", "ResponseMsg" => "Sorry this Order is Assigned to Other Rider Or Cancelled!");
 	}
