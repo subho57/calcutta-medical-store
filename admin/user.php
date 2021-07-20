@@ -66,7 +66,7 @@ define('ONE_HASH', $getkey['one_hash']);
                                 $con->query("update user set wallet=wallet + " . $wallet . " where id=" . $id . "");
                                 $new_bal = $con->query("select * from user where id = " . $id . "")->fetch_assoc();
                                 $heading = array(
-                                    "en" => '💵 ₹ ' . $wallet . ' has been added to your Grocery Wallet 💵'
+                                    "en" => '💵 ₹ ' . $wallet . ' has been added to your Wallet 💵'
                                 );
                                 $content = array(
                                     "en" => 'New Wallet balance is ₹ ' . $new_bal['wallet']
