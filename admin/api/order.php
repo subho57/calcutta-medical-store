@@ -230,7 +230,7 @@ if ($data['uid'] == '') {
                           <td class=\"es-m-p20b\" align=\"center\" style=\"padding:0;Margin:0;width:204px\"> 
                            <table width=\"100%\" cellspacing=\"0\" cellpadding=\"0\" role=\"presentation\" style=\"mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px\"> 
                              <tr style=\"border-collapse:collapse\"> 
-                              <td class=\"es-m-txt-l\" align=\"left\" style=\"padding:0;Margin:0;font-size:0px\"><img src=\"https://admin.calcuttamedicalstore.in/" . $fset['logo'] . "\" alt style=\"display:block;border:0;outline:none;text-decoration:none;-ms-interpolation-mode:bicubic\" width=\"103\" height=\"64\"></td> 
+                              <td class=\"es-m-txt-l\" align=\"left\" style=\"padding:0;Margin:0;font-size:0px\"><img src=\"https://admin.calcuttamedicalstore.in/" . $fset['logo'] . "\" alt style=\"display:block;border:0;outline:none;text-decoration:none;-ms-interpolation-mode:bicubic\" width=\"103\" height=\"103\"></td> 
                              </tr> 
                            </table></td> 
                           <td class=\"es-hidden\" style=\"padding:0;Margin:0;width:5px\"></td> 
