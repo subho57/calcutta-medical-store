@@ -22,7 +22,7 @@ if ($data['mobile'] == '' or $data['password'] == '') {
             $returnArr = array("ResponseCode" => "401", "Result" => "false", "ResponseMsg" => "Invalid Email/Mobile No or Password!!!");
         }
     } else {
-        $returnArr = array("ResponseCode" => "401", "Result" => "false", "ResponseMsg" => "Account Deactive!! Contact Admin");
+        $returnArr = array("ResponseCode" => "401", "Result" => "false", "ResponseMsg" => "Account Deactivated!! Contact Admin");
     }
 }
 

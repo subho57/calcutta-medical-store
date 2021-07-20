@@ -20,7 +20,7 @@ if ($data['name'] == '' or $data['email'] == '' or $data['mobile'] == '' or $dat
         date_default_timezone_set('Asia/Kolkata');
         $timestamp = date("Y-m-d H:i:s");
         $con->query("update rider set name='" . $name . "',aid=" . $aid . ",address='" . $address . "',email='" . $email . "',mobile='" . $mobile . "',password='" . $password . "' where id=" . $uid . "");
-        $c = $con->query("select * from rider where id='" . $uid . "'");
+        $c = $con->query("select * from rider where id=" . $uid);
         $c = $c->fetch_assoc();
         $returnArr = array("rider" => $c, "ResponseCode" => "200", "Result" => "true", "ResponseMsg" => "Profile Updated Successfully!");
     } else {

@@ -8,7 +8,7 @@ $status = $data['status'];
 if ($uid == '' or $status == '') {
     $returnArr = array("ResponseCode" => "401", "Result" => "false", "ResponseMsg" => "Something Went wrong  try again !");
 } else {
-    $con->query("update rider set a_status='" . $status . "' where id='" . $uid . "'");
+    $con->query("update rider set a_status='" . $status . "' where id=" . $uid);
     $returnArr = array("ResponseCode" => "200", "Result" => "true", "ResponseMsg" => "Status Changed Successfully!!!");
 }
 echo json_encode($returnArr);

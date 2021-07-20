@@ -1,6 +1,11 @@
 <?php
+
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\SMTP;
+
 require 'db.php';
-require dirname(dirname(__FILE__)) . '/app-assets/vendors/autoload.php';
+require dirname(dirname(__FILE__)) . '/assets/vendor/autoload.php';
+
 $getkey = $con->query("select * from setting")->fetch_assoc();
 define('ONE_KEY', $getkey['one_key']);
 define('ONE_HASH', $getkey['one_hash']);
@@ -15,116 +20,110 @@ $oid = $data['oid'];
 $status = $data['status'];
 $rid = $data['rid'];
 if ($oid == '' or $status == '' or $rid == '') {
-    $returnArr = array("ResponseCode" => "401", "Result" => "false", "ResponseMsg" => "Something Went wrong  try again !");
+	$returnArr = array("ResponseCode" => "401", "Result" => "false", "ResponseMsg" => "Something Went wrong  try again !");
 } else {
 
-    $oid = strip_tags(mysqli_real_escape_string($con, $oid));
-    $rid = strip_tags(mysqli_real_escape_string($con, $rid));
-    $status = strip_tags(mysqli_real_escape_string($con, $status));
-    $check = $con->query("select *  from orders where rid=" . $rid . " and id=" . $oid . "")->num_rows;
-    if ($check != 0) {
-        if ($status == 'accept') {
+	$oid = strip_tags(mysqli_real_escape_string($con, $oid));
+	$rid = strip_tags(mysqli_real_escape_string($con, $rid));
+	$status = strip_tags(mysqli_real_escape_string($con, $status));
+	$check = $con->query("select *  from orders where rid=" . $rid . " and id=" . $oid . "")->num_rows;
+	if ($check != 0) {
 
-            $con->query("update orders set status='processing',a_status=2,r_status='Accepted' where id=" . $oid . "");
-            $con->query("update rider set accept = accept+1 where id=" . $rid . "");
-            $checks = $con->query("select * from orders where id=" . $oid . "")->fetch_assoc();
-            $heading = array(
-                "en" => 'Your Order Has Been Accepted 🔔' //mesaj burasi
-            );
-            $content = array(
-                "en" => 'Order No.: ' . $oid . ' is on the way.'
-            );
-            $fields = array(
-                'app_id' => ONE_KEY,
-                'included_segments' => array("Subscribed Users"),
-                'filters' => array(array('field' => 'tag', 'key' => 'userId', 'relation' => '=', 'value' => $checks['uid'])),
-                'headings' => $heading,
-                'contents' => $content
-            );
-            $fields = json_encode($fields);
+		// PHP Mailer Integration for cancellation
+		$order = $con->query("select * from orders where  id=" . $oid . "")->fetch_assoc();
+		$day = date('l', strtotime($order['order_date']));
+		$month = date("F", strtotime($order['order_date']));
+		$year = date("Y", strtotime($order['order_date']));
+		$d = substr($order['order_date'], 8, 2);
+		$c = $con->query("select * from user where id=" . $order['uid'] . "")->fetch_assoc();
+
+		// PHP Mail Integration
+		$mail = new PHPMailer();
+		$mail->isSMTP();
+		$mail->SMTPDebug = SMTP::DEBUG_OFF;
+		$mail->Host = 'smtp.hostinger.com';
+		$mail->Port = 587;
+		$mail->SMTPSecure = 'tls';
+		$mail->SMTPAutoTLS = true;
+		$mail->SMTPAuth = true;
+		$mail->Username = API_EMAIL;
+		$mail->Password = API_KEY;
+		$mail->isHTML(true);
+		$mail->setFrom(API_EMAIL, 'Calcutta Medical Stores');
+		$mail->addReplyTo(API_EMAIL, 'Calcutta Medical Stores');
+		$mail->addAddress($c['email'], $c['name']);
+
+		// One Signal Integration
+		$ch = curl_init();
+		curl_setopt($ch, CURLOPT_URL, "https://onesignal.com/api/v1/notifications");
+		curl_setopt(
+			$ch,
+			CURLOPT_HTTPHEADER,
+			array(
+				'Content-Type: application/json; charset=utf-8',
+				'Authorization: Basic ' . ONE_HASH
+			)
+		);
+		curl_setopt($ch, CURLOPT_RETURNTRANSFER, TRUE);
+		curl_setopt($ch, CURLOPT_HEADER, FALSE);
+		curl_setopt($ch, CURLOPT_POST, TRUE);
+		curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, FALSE);
+
+		if ($status == 'accept') {
+
+			$con->query("update orders set status='processing',a_status=2,r_status='Accepted' where id=" . $oid . "");
+			$con->query("update rider set accept = accept+1 where id=" . $rid . "");
+			$checks = $con->query("select * from orders where id=" . $oid . "")->fetch_assoc();
+			$heading = array(
+				"en" => 'Your Order Has Been Accepted 🔔' //mesaj burasi
+			);
+			$content = array(
+				"en" => 'Order No.: ' . $oid . ' is on the way.'
+			);
+			$fields = array(
+				'app_id' => ONE_KEY,
+				'included_segments' => array("Subscribed Users"),
+				'filters' => array(array('field' => 'tag', 'key' => 'userId', 'relation' => '=', 'value' => $checks['uid'])),
+				'headings' => $heading,
+				'contents' => $content
+			);
+			curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($fields));
+			curl_exec($ch);
+			curl_close($ch);
+
+			$returnArr = array("ResponseCode" => "200", "Result" => "true", "ResponseMsg" => "Order Accepted Successfully!!!!!");
+		} else if ($status == 'reject') {
+			$con->query("update orders set a_status=5,r_status='Rejected',rid=0 where id=" . $oid . "");
+			$con->query("update rider set reject = reject+1 where id=" . $rid . "");
+			$returnArr = array("ResponseCode" => "200", "Result" => "false", "ResponseMsg" => "Order Rejected Successfully!!!!!");
+		} else if ($status == 'cancle') {
+			$comment = $data['comment'];
+			$con->query("update orders set a_status=4,r_status='Cancelled',status='cancelled',s_photo='" . $comment . "' where id=" . $oid . "");
+
+			$checks = $con->query("select * from orders where id=" . $oid . "")->fetch_assoc();
+			$heading = array(
+				"en" => 'Your Order Has Been Cancelled 🔔'
+			);
+			$content = array(
+				"en" => 'Order No.: ' . $oid //mesaj burasi
+			);
+			$fields = array(
+				'app_id' => ONE_KEY,
+				'included_segments' => array("Subscribed Users"),
+				'filters' => array(array('field' => 'tag', 'key' => 'userId', 'relation' => '=', 'value' => $checks['uid'])),
+				'headings' => $heading,
+				'contents' => $content
+			);
+			curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($fields));
+			curl_exec($ch);
+			curl_close($ch);
 
 
-            $ch = curl_init();
-            curl_setopt($ch, CURLOPT_URL, "https://onesignal.com/api/v1/notifications");
-            curl_setopt(
-                $ch,
-                CURLOPT_HTTPHEADER,
-                array(
-                    'Content-Type: application/json; charset=utf-8',
-                    'Authorization: Basic ' . ONE_HASH
-                )
-            );
-            curl_setopt($ch, CURLOPT_RETURNTRANSFER, TRUE);
-            curl_setopt($ch, CURLOPT_HEADER, FALSE);
-            curl_setopt($ch, CURLOPT_POST, TRUE);
-            curl_setopt($ch, CURLOPT_POSTFIELDS, $fields);
-            curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, FALSE);
+			$returnArr = array("ResponseCode" => "200", "Result" => "true", "ResponseMsg" => "Order Cancelled Successfully!!!");
 
-            $response = curl_exec($ch);
-            curl_close($ch);
-
-            $returnArr = array("ResponseCode" => "200", "Result" => "true", "ResponseMsg" => "Order Accepted Successfully!!!!!");
-        } else if ($status == 'reject') {
-            $con->query("update orders set a_status=5,r_status='Rejected',rid=0 where id=" . $oid . "");
-            $con->query("update rider set reject = reject+1 where id=" . $rid . "");
-            $returnArr = array("ResponseCode" => "200", "Result" => "false", "ResponseMsg" => "Order Rejected Successfully!!!!!");
-        } else if ($status == 'cancle') {
-            $comment = $data['comment'];
-            $con->query("update orders set a_status=4,r_status='Cancelled',status='cancelled',s_photo='" . $comment . "' where id=" . $oid . "");
-
-            $checks = $con->query("select * from orders where id=" . $oid . "")->fetch_assoc();
-            $heading = array(
-                "en" => 'Your Order Has Been Cancelled 🔔'
-            );
-            $content = array(
-                "en" => 'Order No.: ' . $oid //mesaj burasi
-            );
-            $fields = array(
-                'app_id' => ONE_KEY,
-                'included_segments' => array("Subscribed Users"),
-                'filters' => array(array('field' => 'tag', 'key' => 'userId', 'relation' => '=', 'value' => $checks['uid'])),
-                'headings' => $heading,
-                'contents' => $content
-            );
-            $fields = json_encode($fields);
-
-
-            $ch = curl_init();
-            curl_setopt($ch, CURLOPT_URL, "https://onesignal.com/api/v1/notifications");
-            curl_setopt(
-                $ch,
-                CURLOPT_HTTPHEADER,
-                array(
-                    'Content-Type: application/json; charset=utf-8',
-                    'Authorization: Basic ' . ONE_HASH
-                )
-            );
-            curl_setopt($ch, CURLOPT_RETURNTRANSFER, TRUE);
-            curl_setopt($ch, CURLOPT_HEADER, FALSE);
-            curl_setopt($ch, CURLOPT_POST, TRUE);
-            curl_setopt($ch, CURLOPT_POSTFIELDS, $fields);
-            curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, FALSE);
-
-            $response = curl_exec($ch);
-            curl_close($ch);
-
-
-            $returnArr = array("ResponseCode" => "200", "Result" => "true", "ResponseMsg" => "Order Cancelled Successfully!!!");
-
-            // Sendgrid Mail Integration for cancellation
-            $order = $con->query("select * from orders where  id=" . $oid . "")->fetch_assoc();
-            $day = date('l', strtotime($order['order_date']));
-            $month = date("F", strtotime($order['order_date']));
-            $year = date("Y", strtotime($order['order_date']));
-            $d = substr($order['order_date'], 8, 2);
-            $c = $con->query("select * from user where id=" . $order['uid'] . "")->fetch_assoc();
-            $email = new \SendGrid\Mail\Mail();
-            $email->setFrom(API_EMAIL, "Grocery");
-            $email->setSubject("Your Grocery order " . $order['oid'] . " has been cancelled.");
-            $email->addTo($c['email'], $c['name']);
-            $email->addContent(
-                "text/html",
-                "
+			$mail->Subject = "Your order " . $order['oid'] . " has been cancelled.";
+			$mail->msgHTML(
+				"
 				<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Transitional//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd\">
 				<html xmlns=\"http://www.w3.org/1999/xhtml\" xmlns:o=\"urn:schemas-microsoft-com:office:office\" style=\"width:100%;font-family:arial, 'helvetica neue', helvetica, sans-serif;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;padding:0;Margin:0\">
 				 <head> 
@@ -189,7 +188,7 @@ if ($oid == '' or $status == '' or $rid == '') {
 								  <td class=\"es-m-p20b\" align=\"center\" style=\"padding:0;Margin:0;width:204px\"> 
 								   <table width=\"100%\" cellspacing=\"0\" cellpadding=\"0\" role=\"presentation\" style=\"mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px\"> 
 									 <tr style=\"border-collapse:collapse\"> 
-									  <td class=\"es-m-txt-l\" align=\"left\" style=\"padding:0;Margin:0;font-size:0px\"><img src=\"https://owrnhh.stripocdn.email/content/guids/CABINET_37be19f93fd1833ef516462722e25083/images/56461611226659343.png\" alt style=\"display:block;border:0;outline:none;text-decoration:none;-ms-interpolation-mode:bicubic\" width=\"103\" height=\"64\"></td> 
+									  <td class=\"es-m-txt-l\" align=\"left\" style=\"padding:0;Margin:0;font-size:0px\"><img src=\"https://admin.calcuttamedicalstore.in/" . $fset['logo'] . "\" alt style=\"display:block;border:0;outline:none;text-decoration:none;-ms-interpolation-mode:bicubic\" width=\"103\" height=\"103\"></td> 
 									 </tr> 
 								   </table></td> 
 								  <td class=\"es-hidden\" style=\"padding:0;Margin:0;width:5px\"></td> 
@@ -285,7 +284,7 @@ if ($oid == '' or $status == '' or $rid == '') {
 								  <td align=\"center\" valign=\"top\" style=\"padding:0;Margin:0;width:520px\"> 
 								   <table cellpadding=\"0\" cellspacing=\"0\" width=\"100%\" role=\"presentation\" style=\"mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px\"> 
 									 <tr style=\"border-collapse:collapse\"> 
-									  <td align=\"left\" style=\"padding:0;Margin:0;padding-top:20px\"><p style=\"Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-size:12px;font-family:arial, 'helvetica neue', helvetica, sans-serif;line-height:21px;color:#333333\"><br>Your Order has been cancelled. To manage other orders, please open Grocery App.<br><br></p></td> 
+									  <td align=\"left\" style=\"padding:0;Margin:0;padding-top:20px\"><p style=\"Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-size:12px;font-family:arial, 'helvetica neue', helvetica, sans-serif;line-height:21px;color:#333333\"><br>Your Order has been cancelled. To manage other orders, please open Calcutta Medical Stores App.<br><br></p></td> 
 									 </tr> 
 								   </table></td> 
 								 </tr> 
@@ -352,7 +351,7 @@ if ($oid == '' or $status == '' or $rid == '') {
 								  <td align=\"center\" valign=\"top\" style=\"padding:0;Margin:0;width:520px\"> 
 								   <table cellpadding=\"0\" cellspacing=\"0\" width=\"100%\" role=\"presentation\" style=\"mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px\"> 
 									 <tr style=\"border-collapse:collapse\"> 
-									  <td align=\"left\" style=\"padding:0;Margin:0\"><p style=\"Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-size:12px;font-family:arial, 'helvetica neue', helvetica, sans-serif;line-height:21px;color:#333333\"><br><br>Manage other orders with the&nbsp;<a target=\"_blank\" style=\"-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-family:arial, 'helvetica neue', helvetica, sans-serif;font-size:14px;text-decoration:underline;color:#31ba4e\" href=\"https://play.google.com/store/apps/details?id=com.enestcustomerapp\">Grocery&nbsp;App</a>.<br><br></p><p style=\"Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-size:14px;font-family:arial, 'helvetica neue', helvetica, sans-serif;line-height:21px;color:#333333\">We hope to see you again soon!<br><br><b>Grocery</b><br><br></p></td> 
+									  <td align=\"left\" style=\"padding:0;Margin:0\"><p style=\"Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-size:12px;font-family:arial, 'helvetica neue', helvetica, sans-serif;line-height:21px;color:#333333\"><br><br>Manage other orders with the&nbsp;<a target=\"_blank\" style=\"-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-family:arial, 'helvetica neue', helvetica, sans-serif;font-size:14px;text-decoration:underline;color:#31ba4e\" href=\"https://play.google.com/store/apps/details?id=in.calcuttamedicalstore\">Calcutta Medical Stores&nbsp;App</a>.<br><br></p><p style=\"Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-size:14px;font-family:arial, 'helvetica neue', helvetica, sans-serif;line-height:21px;color:#333333\">We hope to see you again soon!<br><br><b>Calcutta Medical Stores</b><br><br></p></td> 
 									 </tr> 
 									 <tr style=\"border-collapse:collapse\"> 
 									  <td align=\"center\" style=\"padding:20px;Margin:0;font-size:0\"> 
@@ -394,66 +393,36 @@ if ($oid == '' or $status == '' or $rid == '') {
 				  </div>  
 				 </body>
 				</html>"
-            );
-            $sendgrid = new \SendGrid(API_KEY);
-            try {
-                $response = $sendgrid->send($email);
-            } catch (Exception $e) {
-            }
-        } else if ($status == 'complete') {
-            $sign = $data['sign'];
-            $con->query("update orders set a_status=3,r_status='Delivered',status='completed',photo='" . $sign . "' where id=" . $oid . "");
-            $con->query("update rider set complete = complete + 1 where id=" . $rid . "");
+			);
+			$mail->send();
+		} else if ($status == 'complete') {
+			$sign = $data['sign'];
+			$con->query("update orders set a_status=3,r_status='Delivered',status='completed',photo='" . $sign . "' where id=" . $oid . "");
+			$con->query("update rider set complete = complete + 1 where id=" . $rid . "");
 
-            $checks = $con->query("select * from orders where id=" . $oid . "")->fetch_assoc();
-            $heading = array(
-                "en" => 'Your Order has been delivered successfully 🔔'
-            );
-            $content = array(
-                "en" => 'Order No.: ' . $oid //mesaj burasi
-            );
-            $fields = array(
-                'app_id' => ONE_KEY,
-                'included_segments' => array("Subscribed Users"),
-                'filters' => array(array('field' => 'tag', 'key' => 'userId', 'relation' => '=', 'value' => $checks['uid'])),
-                'headings' => $heading,
-                'contents' => $content
-            );
-            $fields = json_encode($fields);
+			$checks = $con->query("select * from orders where id=" . $oid . "")->fetch_assoc();
+			$heading = array(
+				"en" => 'Your Order has been delivered successfully 🔔'
+			);
+			$content = array(
+				"en" => 'Order No.: ' . $oid //mesaj burasi
+			);
+			$fields = array(
+				'app_id' => ONE_KEY,
+				'included_segments' => array("Subscribed Users"),
+				'filters' => array(array('field' => 'tag', 'key' => 'userId', 'relation' => '=', 'value' => $checks['uid'])),
+				'headings' => $heading,
+				'contents' => $content
+			);
+			curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($fields));
+			curl_exec($ch);
+			curl_close($ch);
 
+			$returnArr = array("ResponseCode" => "200", "Result" => "true", "ResponseMsg" => "Order Completed Successfully!!!");
 
-            $ch = curl_init();
-            curl_setopt($ch, CURLOPT_URL, "https://onesignal.com/api/v1/notifications");
-            curl_setopt(
-                $ch,
-                CURLOPT_HTTPHEADER,
-                array(
-                    'Content-Type: application/json; charset=utf-8',
-                    'Authorization: Basic ' . ONE_HASH
-                )
-            );
-            curl_setopt($ch, CURLOPT_RETURNTRANSFER, TRUE);
-            curl_setopt($ch, CURLOPT_HEADER, FALSE);
-            curl_setopt($ch, CURLOPT_POST, TRUE);
-            curl_setopt($ch, CURLOPT_POSTFIELDS, $fields);
-            curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, FALSE);
-
-            $response = curl_exec($ch);
-            curl_close($ch);
-
-
-            $returnArr = array("ResponseCode" => "200", "Result" => "true", "ResponseMsg" => "Order Completed Successfully!!!");
-
-            $c = $con->query("select * from user where id=" . $checks['uid'] . "")->fetch_assoc();
-
-            // Sendgrid Mail Integration
-            $email = new \SendGrid\Mail\Mail();
-            $email->setFrom(API_EMAIL, "Grocery");
-            $email->setSubject("Delivered: Your Grocery package has been delivered.");
-            $email->addTo($c['email'], $c['name']);
-            $email->addContent(
-                "text/html",
-                "<!DOCTYPE html
+			$mail->Subject = "Delivered: Your package has been delivered.";
+			$mail->msgHTML(
+				"<!DOCTYPE html
 				PUBLIC \"-//W3C//DTD XHTML 1.0 Transitional//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd\">
 			  <html xmlns=\"http://www.w3.org/1999/xhtml\" xmlns:o=\"urn:schemas-microsoft-com:office:office\">
 			  
@@ -1178,8 +1147,8 @@ if ($oid == '' or $status == '' or $rid == '') {
 													<tbody>
 													  <tr>
 														<td align=\"center\" class=\"esd-block-image es-p30t\" style=\"font-size: 0px;\"><a
-															target=\"_blank\" href=\"https://www.enest.store\"><img
-															  src=\"https://owrnhh.stripocdn.email/content/guids/CABINET_37be19f93fd1833ef516462722e25083/images/56461611226659343.png\"
+															target=\"_blank\" href=\"https://www.calcuttamedicalstore.in\"><img
+															  src=\"https://admin.calcuttamedicalstore.in/" . $fset['logo'] . "\"
 															  alt style=\"display: block;\" width=\"130\"></a></td>
 													  </tr>
 													</tbody>
@@ -1234,9 +1203,9 @@ if ($oid == '' or $status == '' or $rid == '') {
 														  esd-links-color=\"#31ba4e\">
 														  <p style=\"line-height: 200%;\"><span style=\"font-size:16px;\">Hi
 															  " . strtok($c['name'], " ") . ",</span><br>Your package has been delivered!<br>Please rate
-															your delivery experience on the Enest App.<br><br>To manage other orders,
+															your delivery experience on the Calcutta Medical Stores App.<br><br>To manage other orders,
 															open the <a target=\"_blank\" style=\"line-height: 200%; color: #31ba4e;\"
-															  href=\"https://play.google.com/store/apps/details?id=com.enestcustomerapp\">Enest
+															  href=\"https://play.google.com/store/apps/details?id=in.calcuttamedicalstore\">Calcutta Medical Stores
 															  App</a>.</p>
 														</td>
 													  </tr>
@@ -1285,18 +1254,14 @@ if ($oid == '' or $status == '' or $rid == '') {
 			  </body>
 			  
 			  </html>"
-            );
-            $sendgrid = new \SendGrid(API_KEY);
-            try {
-                $response = $sendgrid->send($email);
-            } catch (Exception $e) {
-            }
-        } else {
-            $returnArr = array("ResponseCode" => "401", "Result" => "false", "ResponseMsg" => "Something Went wrong  try again !");
-        }
-    } else {
-        $returnArr = array("ResponseCode" => "401", "Result" => "false", "ResponseMsg" => "Sorry this Order is Assigned to Other Rider Or Cancelled!");
-    }
+			);
+			$mail->send();
+		} else {
+			$returnArr = array("ResponseCode" => "401", "Result" => "false", "ResponseMsg" => "Something Went wrong  try again !");
+		}
+	} else {
+		$returnArr = array("ResponseCode" => "401", "Result" => "false", "ResponseMsg" => "Sorry this Order is Assigned to Other Rider Or Cancelled!");
+	}
 }
 echo json_encode($returnArr);
 mysqli_close($con);
