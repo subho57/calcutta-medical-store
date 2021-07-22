@@ -46,9 +46,9 @@
     <!-- Twitter Tags -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="<?php echo $fset['title']; ?> - Kolkata's Best Online Pharmacy">
-    <meta name="twitter:site" content="@calcuttamedicalstores">
+    <meta name="twitter:site" content="@calcuttamedical">
     <meta name="twitter:image" content="https://www.calcuttamedicalstore.in/admin/<?php echo $fset['favicon']; ?>">
-    <meta name="twitter:creator" content="@calcuttamedicalstores">
+    <meta name="twitter:creator" content="@calcuttamedical">
     <meta name="twitter:description" content="<?php echo $fset['title']; ?> is Kolkata's best online pharmacy that allows you to conveniently order online, refill, or consult with an online pharmacist and offers free shipping and low prices.">
 
     <!-- Apple icons -->
@@ -58,7 +58,7 @@
     <link rel="icon" type="image/png" href="/admin/<?php echo $fset['favicon']; ?>">
 
     <!-- Manifest links -->
-    <link rel="manifest" href="/admin/manifest.webmanifest">
+    <!-- <link rel="manifest" href="/admin/manifest.webmanifest"> -->
 
     <script>
         // load service worker
@@ -82,8 +82,8 @@
             "name": "<?php echo $fset['title']; ?>",
             "logo": "https://www.calcuttamedicalstore.in/admin/<?php echo $fset['favicon']; ?>",
             "sameAs": [
-                "https://www.facebook.com/calcuttamedicalstores",
-                "https://twitter.com/calcuttamedicalstores",
+                "https://www.facebook.com/Calcutta-Medical-Store-100149615672610",
+                "https://twitter.com/calcuttamedical",
                 "https://www.instagram.com/calcuttamedicalstore",
                 "https://www.linkedin.com/company/calcuttamedicalstores/"
             ]
@@ -1422,8 +1422,8 @@
             background-repeat: no-repeat;
             background-position: 0 0;
             background-size: 100% auto;
-            width: 3rem;
-            height: 3rem
+            width: 6rem;
+            height: 6rem
         }
 
         .footer-icons[_ngcontent-sc69] img[_ngcontent-sc69] {
@@ -1431,15 +1431,15 @@
         }
 
         .footer-icons[href*=twitter][_ngcontent-sc69] {
-            background-position: left -3rem
-        }
-
-        .footer-icons[href*=instagram][_ngcontent-sc69] {
             background-position: left -6rem
         }
 
+        .footer-icons[href*=instagram][_ngcontent-sc69] {
+            background-position: left -12rem
+        }
+
         .footer-icons[href*=linkedin][_ngcontent-sc69] {
-            background-position: left -9rem
+            background-position: left -18rem
         }
 
         @media only screen and (max-width:360px) {
@@ -2192,12 +2192,11 @@
                                                 <p _ngcontent-sc64="" translate="" class="small font-regular txt-c">
                                                     Follow us:</p>
                                                 <div _ngcontent-sc64="" class="row row--middle">
-                                                    <div _ngcontent-sc64="" class="column"><a _ngcontent-sc64="" href="https://www.facebook.com/calcuttamedicalstores" target="_blank" rel="noreferrer" class="btn btn-icon footer-icons"></a>
+                                                    <div _ngcontent-sc64="" class="column"><a _ngcontent-sc64="" href="https://www.facebook.com/Calcutta-Medical-Store-100149615672610" target="_blank" rel="noreferrer" class="btn btn-icon footer-icons"></a>
                                                     </div>
-                                                    <div _ngcontent-sc64="" class="column"><a _ngcontent-sc64="" href="https://twitter.com/calcuttamedicalstores" target="_blank" rel="noreferrer" class="btn btn-icon footer-icons"></a>
+                                                    <div _ngcontent-sc64="" class="column"><a _ngcontent-sc64="" href="https://twitter.com/calcuttamedical" target="_blank" rel="noreferrer" class="btn btn-icon footer-icons"></a>
                                                     </div>
                                                     <div _ngcontent-sc64="" class="column"><a _ngcontent-sc64="" href="https://www.instagram.com/calcuttamedicalstore" target="_blank" rel="noreferrer" class="btn btn-icon footer-icons"></a></div>
-                                                    <div _ngcontent-sc64="" class="column"><a _ngcontent-sc64="" href="https://www.linkedin.com/company/calcuttamedicalstores" target="_blank" rel="noreferrer" class="btn btn-icon footer-icons"></a></div>
                                                 </div>
                                             </div>
                                         </div>

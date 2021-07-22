@@ -76,10 +76,9 @@ require 'admin/include/dbconfig.php';
             "name": "<?php echo $fset['title']; ?>",
             "logo": "https://www.calcuttamedicalstore.in/admin/<?php echo $fset['favicon']; ?>",
             "sameAs": [
-                "https://www.facebook.com/calcuttamedicalstores",
-                "https://twitter.com/calcuttamedicalstores",
-                "https://www.instagram.com/calcuttamedicalstores/",
-                "https://www.linkedin.com/company/calcuttamedicalstores/"
+                "https://www.facebook.com/Calcutta-Medical-Store-100149615672610",
+                "https://twitter.com/calcuttamedical",
+                "https://www.instagram.com/calcuttamedicalstore/"
             ]
         }
     </script>

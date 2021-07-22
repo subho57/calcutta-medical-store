@@ -47,9 +47,9 @@ require 'admin/include/dbconfig.php';
     <!-- Twitter Tags -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="<?php echo $fset['title']; ?> - Kolkata's Best Online Pharmacy">
-    <meta name="twitter:site" content="@calcuttamedicalstores">
+    <meta name="twitter:site" content="@calcuttamedical">
     <meta name="twitter:image" content="https://www.calcuttamedicalstore.in/admin/<?php echo $fset['favicon']; ?>">
-    <meta name="twitter:creator" content="@calcuttamedicalstores">
+    <meta name="twitter:creator" content="@calcuttamedical">
     <meta name="twitter:description" content="<?php echo $fset['title']; ?> is Kolkata's best online pharmacy that allows you to conveniently order online, refill, or consult with an online pharmacist and offers free shipping and low prices.">
 
     <!-- Apple icons -->
@@ -76,10 +76,9 @@ require 'admin/include/dbconfig.php';
             "name": "<?php echo $fset['title']; ?>",
             "logo": "https://www.calcuttamedicalstore.in/admin/<?php echo $fset['favicon']; ?>",
             "sameAs": [
-                "https://www.facebook.com/calcuttamedicalstores",
-                "https://twitter.com/calcuttamedicalstores",
-                "https://www.instagram.com/calcuttamedicalstores/",
-                "https://www.linkedin.com/company/calcuttamedicalstores/"
+                "https://www.facebook.com/Calcutta-Medical-Store-100149615672610",
+                "https://twitter.com/calcuttamedical",
+                "https://www.instagram.com/calcuttamedicalstore/"
             ]
         }
     </script>
