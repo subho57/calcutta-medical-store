@@ -2156,8 +2156,8 @@
                                                         <div _ngcontent-sc57="" class="column">
                                                             <ul _ngcontent-sc57="" class="list list--reset">
                                                                 <li _ngcontent-sc57=""><a _ngcontent-sc57="" translate=""><br /></a></li>
-                                                                <li _ngcontent-sc57=""><a _ngcontent-sc57="" translate="" href="privacy-policy">Privacy Policy</a></li>
-                                                                <li _ngcontent-sc57=""><a _ngcontent-sc57="" translate="" href="terms-conditions">Terms &#38; Conditions</a></li>
+                                                                <li _ngcontent-sc57=""><a _ngcontent-sc57="" translate="" href="privacy-policy.php">Privacy Policy</a></li>
+                                                                <li _ngcontent-sc57=""><a _ngcontent-sc57="" translate="" href="terms-conditions.php">Terms &#38; Conditions</a></li>
                                                                 <!---->
                                                             </ul>
                                                         </div>
