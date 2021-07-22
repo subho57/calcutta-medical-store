@@ -84,7 +84,7 @@
             "sameAs": [
                 "https://www.facebook.com/calcuttamedicalstores",
                 "https://twitter.com/calcuttamedicalstores",
-                "https://www.instagram.com/calcuttamedicalstores/",
+                "https://www.instagram.com/calcuttamedicalstore",
                 "https://www.linkedin.com/company/calcuttamedicalstores/"
             ]
         }
@@ -1752,7 +1752,35 @@
     </style>
 </head>
 
-<body style="margin: 0; background-image: url('admin/website/medicines.jpg'); background-size: contain;">
+<body style="margin: 0; background-image: url('admin/website/bg.jpg'); background-size: contain;">
+    <!-- Messenger Chat plugin Code -->
+    <div id="fb-root"></div>
+
+    <!-- Your Chat plugin code -->
+    <div id="fb-customer-chat" class="fb-customerchat">
+    </div>
+
+    <script>
+        var chatbox = document.getElementById('fb-customer-chat');
+        chatbox.setAttribute("page_id", "100149615672610");
+        chatbox.setAttribute("attribution", "biz_inbox");
+
+        window.fbAsyncInit = function() {
+            FB.init({
+                xfbml: true,
+                version: 'v11.0'
+            });
+        };
+
+        (function(d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s);
+            js.id = id;
+            js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+    </script>
     <div class="browser-warning" style="padding: 8px 12px; color: #fff; font-weight: 400;text-align: center; font-size:16px;background-color:#f77000; line-height:1.5; position: fixed; top:0; left:0; width: 100%; z-index: 9999; display: none;">
         For the best experience, please switch your browser to Chrome, Safari, Firefox or Edge.
     </div>
@@ -1947,8 +1975,7 @@
                                                     <h3 _ngcontent-sc62="" translate="" class="h3 font-semibold color-dark margin-t-xl">Free delivery
                                                     </h3>
                                                     <p _ngcontent-sc62="" translate="" class="h4 color-base margin-t-s">
-                                                        Get your meds delivered to you with no added cost. *Next Day
-                                                        Delivery available in select locations.
+                                                        Get your meds delivered to you with no added cost.
                                                         <!--ng-container-->
                                                         <!--bindings={
     "ng-reflect-ng-if": "true"
@@ -2122,14 +2149,20 @@
                                             <div _ngcontent-sc64="" class="mega-footer__primary divider divider--b">
                                                 <div _ngcontent-sc64="" class="row row--space-between row--wrap row--full-gutter xsmall-1 medium-2">
                                                     <div _ngcontent-sc64="" class="column">
-                                                        <nav _ngcontent-sc64="">
-                                                            <div _ngcontent-sc64="" class="row row--wrap row--gutter xsmall-1 medium-2">
-                                                            </div>
-                                                        </nav>
-                                                        <!---->
-                                                        <!---->
-                                                    </div>
+                                                        <h4 _ngcontent-sc64="" translate="" keyname="landing.footer.operating-hours" class="h5 color-dark font-semibold">Address
+                                                        </h4>
+                                                        <p _ngcontent-sc64="" translate="" keyname="landing.footer.operating-time" class="h5 color-base margin-t-m">Calcutta Medical Stores,<br />90B SHYAMA PROSAD MUKHERJEE ROAD,<br />KOLKATA - 700026,<br />West Bengal<br />
+                                                        </p>
+                                                        <div _ngcontent-sc57="" class="column">
+                                                            <ul _ngcontent-sc57="" class="list list--reset">
+                                                                <li _ngcontent-sc57=""><a _ngcontent-sc57="" translate=""><br /></a></li>
+                                                                <li _ngcontent-sc57=""><a _ngcontent-sc57="" translate="" href="privacy-policy">Privacy Policy</a></li>
+                                                                <li _ngcontent-sc57=""><a _ngcontent-sc57="" translate="" href="terms-conditions">Terms &#38; Conditions</a></li>
+                                                                <!---->
+                                                            </ul>
+                                                        </div>
 
+                                                    </div>
 
                                                     <div _ngcontent-sc64="" class="column">
                                                         <h4 _ngcontent-sc64="" translate="" keyname="landing.footer.operating-hours" class="h5 color-dark font-semibold">Pharmacy Operating Hours
@@ -2138,7 +2171,7 @@
                                                             PM, IST</p>
                                                         <h4 _ngcontent-sc64="" translate="" keyname="landing.footer.contact-us" class="h5 color-dark font-semibold margin-t-xl">Contact Us
                                                         </h4>
-                                                        <p _ngcontent-sc64="" class="h5 color-base margin-t-m"><span _ngcontent-sc64="" translate="" keyname="landing.footer.email">Email</span>: <a _ngcontent-sc64="" class="clr-primary" href="mailto:<?php echo $fset['sendgrid_email']; ?>"><?php echo $fset['sendgrid_email']; ?></a>
+                                                        <p _ngcontent-sc64="" class="h5 color-base margin-t-m"><span _ngcontent-sc64="" translate="" keyname="landing.footer.email">Email</span>: <a _ngcontent-sc64="" class="clr-primary" href="mailto:calcuttamedicals@gmail.com">calcuttamedicals@gmail.com</a>
                                                         </p>
                                                         <p _ngcontent-sc64="" class="h5 color-base"><span _ngcontent-sc64="" translate="" keyname="landing.footer.call">Call</span>: <a _ngcontent-sc64="" class="clr-primary" href="tel:<?php echo $fset['callsupport']; ?>"><?php echo $fset['callsupport']; ?></a></p>
                                                         <div _ngcontent-sc64="" class="margin-t-xl">
@@ -2163,7 +2196,7 @@
                                                     </div>
                                                     <div _ngcontent-sc64="" class="column"><a _ngcontent-sc64="" href="https://twitter.com/calcuttamedicalstores" target="_blank" rel="noreferrer" class="btn btn-icon footer-icons"></a>
                                                     </div>
-                                                    <div _ngcontent-sc64="" class="column"><a _ngcontent-sc64="" href="https://www.instagram.com/calcuttamedicalstores/" target="_blank" rel="noreferrer" class="btn btn-icon footer-icons"></a></div>
+                                                    <div _ngcontent-sc64="" class="column"><a _ngcontent-sc64="" href="https://www.instagram.com/calcuttamedicalstore" target="_blank" rel="noreferrer" class="btn btn-icon footer-icons"></a></div>
                                                     <div _ngcontent-sc64="" class="column"><a _ngcontent-sc64="" href="https://www.linkedin.com/company/calcuttamedicalstores" target="_blank" rel="noreferrer" class="btn btn-icon footer-icons"></a></div>
                                                 </div>
                                             </div>
