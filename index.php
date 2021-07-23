@@ -79,10 +79,10 @@
     <style>
         .float {
             position: fixed;
-            width: 60px;
-            height: 60px;
-            bottom: 40px;
-            left: 40px;
+            width: 50px;
+            height: 50px;
+            bottom: 60px;
+            right: 30px;
             background-color: #25d366;
             color: #FFF;
             border-radius: 50px;
