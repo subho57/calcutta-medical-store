@@ -33,7 +33,7 @@ if ($uid == '') {
     }
 
     $result = array();
-    $prod = $con->query("select * from product where status=1 and popular = 1 order by id desc limit 5 ");
+    $prod = $con->query("select * from product where status=1 and popular = 1 order by id desc");
     while ($row = $prod->fetch_assoc()) {
         $result['id'] = $row['id'];
         $result['cat_id'] = $row['cid'];
