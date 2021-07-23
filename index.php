@@ -1945,7 +1945,8 @@
                         <!---->
                         <div _ngcontent-sc69="" class="section-landing bg-f txt-c">
                             <div _ngcontent-sc69="">
-                                <p _ngcontent-sc69="" translate="" class="news__headline h1 color-black margin-t-xl">
+                                <p _ngcontent-sc69="" translate="" class="news__headline h1 color-black margin-t-xl"><img src="https://razorpay.com/assets/payments/cp_modes_wallets.png" />
+                                    <br/>
                                     "Reinvent the pharmacy Experience"</p>
                                 <p _ngcontent-sc69="" class="news__source font-semibold small">- Vancouver Sun</p>
                             </div>
