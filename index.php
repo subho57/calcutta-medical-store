@@ -79,21 +79,22 @@
     <style>
         .float {
             position: fixed;
-            width: 55px;
-            height: 55px;
+            width: 60px;
+            height: 60px;
             bottom: 100px;
             right: 30px;
             background-color: #25d366;
             color: #FFF;
-            border-radius: 50px;
+            border-radius: 55px;
             text-align: center;
-            font-size: 30px;
+            font-size: 40px;
             box-shadow: 2px 2px 3px #999;
             z-index: 100;
         }
 
         .my-float {
-            margin-top: 16px;
+            margin-top: 12px;
+            margin-left: 2px;
             color: #FFF;
         }
     </style>
