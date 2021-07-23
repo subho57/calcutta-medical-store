@@ -1817,7 +1817,7 @@
                                     </div>
                                     <div _ngcontent-sc69="" class="column">
                                         <div _ngcontent-sc69="" class="row row--middle row--gutter row--right btn-right">
-                                            <div _ngcontent-sc69="" class="column"><a href="https://www.admin.calcuttamedicalstore.in/"><button _ngcontent-sc69="" translate="" keyname="landing.navbar.login" class="card__header xsmall divider divider--t divider--r divider--b divider--l color-dark">LOG
+                                            <div _ngcontent-sc69="" class="column"><a href="https://admin.calcuttamedicalstore.in/"><button _ngcontent-sc69="" translate="" keyname="landing.navbar.login" class="card__header xsmall divider divider--t divider--r divider--b divider--l color-dark">LOG
                                                         IN</button></a></div>
 
                                             <!---->
