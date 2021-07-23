@@ -41,12 +41,12 @@ if (!empty($_SESSION['username'])) {
         <!-- Subhankar Pal | @subho57 -->
         <!-- PWA Migration -->
         <link rel="manifest" href="manifest.webmanifest" />
-        <script>
+        <!-- <script>
         // load service worker
         "serviceWorker" in navigator && window.addEventListener("load", () => {
             navigator.serviceWorker.register("serviceWorker.js").then(e => console.log("Success: ", e.scope)).catch(e => console.log("Failure: ", e))
         });
-        </script>
+        </script> -->
         <!-- <script type="module" src="https://cdn.jsdelivr.net/npm/@pwabuilder/pwainstall"></script>
         <script type="module">
             // This is the service worker with the Advanced caching

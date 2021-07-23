@@ -46,8 +46,10 @@ if (isset($_GET['success'])) {
     <link rel="stylesheet" type="text/css" href="assets/css/tables/datatable/datatables.min.css">
 
     <link rel="stylesheet" type="text/css" href="assets/css/app.css">
+    <link rel="manifest" href="manifest.webmanifest" />
+
     <!-- Subhankar Pal | @subho57 -->
-    <script src="OneSignalSDK.js"></script>
+    <script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async=""></script>
     <script>
         window.OneSignal = window.OneSignal || [];
         OneSignal.push(function() {

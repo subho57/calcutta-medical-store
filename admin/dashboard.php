@@ -409,6 +409,29 @@ require 'include/header.php';
   <?php
   require 'include/js.php';
   ?>
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+  <script src="https://www.gstatic.com/firebasejs/8.8.0/firebase-app.js"></script>
+
+  <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+  <script src="https://www.gstatic.com/firebasejs/8.8.0/firebase-analytics.js"></script>
+
+  <script>
+    // Your web app's Firebase configuration
+    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+    var firebaseConfig = {
+      apiKey: "AIzaSyByCEqmH-KpyRFYtJrw2WODpI2sES3ySZ0",
+      authDomain: "calcutta-medical-stores.firebaseapp.com",
+      projectId: "calcutta-medical-stores",
+      storageBucket: "calcutta-medical-stores.appspot.com",
+      messagingSenderId: "343671113761",
+      appId: "1:343671113761:web:c5c1bae0932242cb74bb60",
+      measurementId: "G-6GXGL3LPND"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    firebase.analytics();
+  </script>
 </body>
 
 </html>

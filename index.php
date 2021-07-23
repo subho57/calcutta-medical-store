@@ -58,14 +58,14 @@
     <link rel="icon" type="image/png" href="/admin/<?php echo $fset['favicon']; ?>">
 
     <!-- Manifest links -->
-    <!-- <link rel="manifest" href="/admin/manifest.webmanifest"> -->
+    <link rel="manifest" href="/admin/manifest.webmanifest">
 
-    <script>
+    <!-- <script>
         // load service worker
         "serviceWorker" in navigator && window.addEventListener("load", () => {
             navigator.serviceWorker.register("admin/serviceWorker.js").then(e => console.log("Success: ", e.scope)).catch(e => console.log("Failure: ", e))
         });
-    </script>
+    </script> -->
 
     <!-- ms application meta tags -->
     <meta name="msapplication-TileColor" content="#4a44a0">
@@ -1750,6 +1750,15 @@
             border-radius: 0 .4rem .4rem 0
         }
     </style>
+    <script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async=""></script>
+    <script>
+        window.OneSignal = window.OneSignal || [];
+        OneSignal.push(function() {
+            OneSignal.init({
+                appId: "<?php echo $fset['one_key']; ?>",
+            });
+        });
+    </script>
 </head>
 
 <body style="margin: 0; background-image: url('admin/website/bg.jpg'); background-size: contain;">
@@ -2226,6 +2235,29 @@
     <script src="/polyfills.b2c03547272e62feaca5.js" defer=""></script>
     <script src="/vendor.46a521cb85c78f44d792.js" defer=""></script>
     <script src="/main.8935c3103978be4334eb.js" defer=""></script>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.8.0/firebase-app.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/8.8.0/firebase-analytics.js"></script>
+
+    <script>
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        var firebaseConfig = {
+            apiKey: "AIzaSyByCEqmH-KpyRFYtJrw2WODpI2sES3ySZ0",
+            authDomain: "calcutta-medical-stores.firebaseapp.com",
+            projectId: "calcutta-medical-stores",
+            storageBucket: "calcutta-medical-stores.appspot.com",
+            messagingSenderId: "343671113761",
+            appId: "1:343671113761:web:82f28ae60e11734874bb60",
+            measurementId: "G-K04J06VF4V"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        firebase.analytics();
+    </script>
 </body>
 
 </html>
