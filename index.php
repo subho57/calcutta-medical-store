@@ -1761,7 +1761,7 @@
     </script>
 </head>
 
-<body style="margin: 0; background-image: url('admin/website/bg.jpg'); background-size: cover;">
+<body style="margin: 0; background-image: url('admin/website/bg.jpg'); background-size: contain;">
     <!-- Messenger Chat plugin Code -->
     <div id="fb-root"></div>
 
