@@ -1945,7 +1945,7 @@
                         <!---->
                         <div _ngcontent-sc69="" class="section-landing bg-f txt-c">
                             <div _ngcontent-sc69="">
-                                <p _ngcontent-sc69="" translate="" class="news__headline h1 color-black margin-t-xl">"Reinvent the pharmacy Experience"<br /><img src="https://razorpay.com/assets/upi-autopay/logo-mobile.png" />
+                                <p _ngcontent-sc69="" translate="" class="news__headline h1 color-black margin-t-xl">"Reinvent the pharmacy Experience"<br /><img src="https://razorpay.com/assets/upi-autopay/logo-mobile.png" weight="100px" />
                                 </p>
                                 <p _ngcontent-sc69="" class="news__source font-semibold small">Payments powered by Razorpay</p>
                             </div>
