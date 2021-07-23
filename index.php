@@ -1814,9 +1814,12 @@
             fjs.parentNode.insertBefore(js, fjs);
         }(document, 'script', 'facebook-jssdk'));
     </script>
-    <a href="https://api.whatsapp.com/send?phone=<?php echo $fset['callsupport']; ?>" class="float" target="_blank">
-        <i class="fa fa-whatsapp my-float"></i>
-    </a>
+    <div class="float">
+        <a href="https://api.whatsapp.com/send?phone=<?php echo $fset['callsupport']; ?>" target="_blank">
+            <i class="fa fa-whatsapp my-float"></i>
+        </a>
+    </div>
+
     <div class="browser-warning" style="padding: 8px 12px; color: #fff; font-weight: 400;text-align: center; font-size:16px;background-color:#f77000; line-height:1.5; position: fixed; top:0; left:0; width: 100%; z-index: 9999; display: none;">
         For the best experience, please switch your browser to Chrome, Safari, Firefox or Edge.
     </div>
