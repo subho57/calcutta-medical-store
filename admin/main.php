@@ -189,7 +189,14 @@
                 <li><a href="setting.php"><i class="ft-settings"></i><span data-i18n=""
                                                                            class="menu-title">Settings</span></a>
                 </li>
-                <li class="has-sub nav-item"><a href="#">
+                <li>
+                    <br/>
+                    <br/>
+                    <br/>
+                    <br/>
+                    <br/>
+                </li>
+                <!-- <li class="has-sub nav-item"><a href="#">
                         <font size=5>🧑‍💻</font><span data-i18n=""
                                                        class="menu-title">&nbsp;&nbsp;Developer Section</span>
                     </a>
@@ -197,7 +204,7 @@
                         <li><a href="keys.php" class="menu-item">🔑 REST API Keys</a>
                         </li>
                     </ul>
-                </li>
+                </li> -->
             </ul>
         </div>
     </div>
