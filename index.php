@@ -79,9 +79,9 @@
     <style>
         .float {
             position: fixed;
-            width: 50px;
-            height: 50px;
-            bottom: 60px;
+            width: 55px;
+            height: 55px;
+            bottom: 100px;
             right: 30px;
             background-color: #25d366;
             color: #FFF;
