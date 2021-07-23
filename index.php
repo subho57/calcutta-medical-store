@@ -94,6 +94,7 @@
 
         .my-float {
             margin-top: 16px;
+            color: #FFF;
         }
     </style>
 
