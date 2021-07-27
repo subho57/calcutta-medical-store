@@ -29,16 +29,15 @@ define('ONE_HASH', $getkey['one_hash']);
                                 if (isset($_GET['a_bal'])) {
                                     ?>
                                     <div class="card-header">
-                                        <h4 class="card-title">Add Wallet Balance To Selected User</h4>
+                                        <h4 class="card-title">Add Reward Points To Selected User</h4>
                                     </div>
                                     <div class="card-body collapse show">
                                         <div class="card-block card-dashboard">
                                             <form class="form" method="post" enctype="multipart/form-data">
                                                 <div class="form-body">
 
-
                                                     <div class="form-group">
-                                                        <label for="cname">Wallet Amount</label>
+                                                        <label for="cname">Reward Points</label>
                                                         <input type="number" step="any" name="wal_bal"
                                                                onkeypress="return isNumberKey(event)"
                                                                class="form-control" required/>
@@ -48,7 +47,7 @@ define('ONE_HASH', $getkey['one_hash']);
 
                                                         <button type="submit" name="add_balance"
                                                                 class="btn btn-raised btn-raised btn-primary">
-                                                            <i class="fa fa-check-square-o"></i> Add Balance
+                                                            <i class="fa fa-check-square-o"></i> Add Points
                                                         </button>
                                                     </div>
                                                 </div>
@@ -66,10 +65,10 @@ define('ONE_HASH', $getkey['one_hash']);
                                 $con->query("update user set wallet=wallet + " . $wallet . " where id=" . $id . "");
                                 $new_bal = $con->query("select * from user where id = " . $id . "")->fetch_assoc();
                                 $heading = array(
-                                    "en" => '💵 ₹ ' . $wallet . ' has been added to your Wallet 💵'
+                                    "en" => "⭐ You've received " . $wallet . " points ⭐"
                                 );
                                 $content = array(
-                                    "en" => 'New Wallet balance is ₹ ' . $new_bal['wallet']
+                                    "en" => 'Total Points = ' . $new_bal['wallet']
                                 );
                                 $fields = array(
                                     'app_id' => ONE_KEY,
@@ -104,7 +103,7 @@ define('ONE_HASH', $getkey['one_hash']);
                                     <script type="text/javascript">
                                         $(document).ready(function () {
                                             toastr.options.timeOut = 4500; // 1.5s
-                                            toastr.info('Balance Added Successfully!!!');
+                                            toastr.info('Points Added Successfully!!!');
                                             window.location.href = "user.php";
                                         });
                                     </script>
@@ -130,7 +129,7 @@ define('ONE_HASH', $getkey['one_hash']);
                                                     <th>Total Orders Received</th>
                                                     <th>Total Purchase Amount (in ₹)</th>
                                                     <th>Current_Status</th>
-                                                    <th>Wallet Balance</th>
+                                                    <th>Reward Points</th>
                                                     <th>Status</th>
                                                     <th>Action</th>
 
@@ -203,7 +202,7 @@ define('ONE_HASH', $getkey['one_hash']);
                                                             <a class="btn btn-success"
                                                                href="?a_bal=<?php echo $row['id']; ?>"
                                                                data-original-title="" title="">
-                                                                Add Balance
+                                                                Add Points
                                                             </a>
                                                         </td>
 

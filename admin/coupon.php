@@ -1,5 +1,8 @@
 <?php
 require 'include/header.php';
+$getkey = $con->query("select * from setting")->fetch_assoc();
+define('ONE_KEY', $getkey['one_key']);
+define('ONE_HASH', $getkey['one_hash']);
 function resizeImage($resourceType, $image_width, $image_height, $resizeWidth, $resizeHeight)
 {
 	// $resizeWidth = 100;
@@ -407,11 +410,48 @@ function resizeImage($resourceType, $image_width, $image_height, $resizeWidth, $
 															}
 
 															$url = $uploadPath . "thump_" . $resizeFileName . "." . $fileExt;
-															$con->query("insert into tbl_coupon(`c_img`,`c_desc`,`c_value`,`c_title`,`status`,`cdate`,`ctitle`,`min_amt`,`min_quan`)values('" . $url . "','" . $cdesc . "','" . $cvalue . "','" . $ccode . "'," . $cstatus . ",'" . $cdate . "','" . $ctitle . "'," . $minamt . "," . $minquan . ")");
 														} else {
 															$url = "coupon/default_coupon.png";
-															$con->query("insert into tbl_coupon(`c_img`,`c_desc`,`c_value`,`c_title`,`status`,`cdate`,`ctitle`,`min_amt`,`min_quan`)values('" . $url . "','" . $cdesc . "','" . $cvalue . "','" . $ccode . "'," . $cstatus . ",'" . $cdate . "','" . $ctitle . "'," . $minamt . "," . $minquan . ")");
 														}
+														$con->query("insert into tbl_coupon(`c_img`,`c_desc`,`c_value`,`c_title`,`status`,`cdate`,`ctitle`,`min_amt`,`min_quan`)values('" . $url . "','" . $cdesc . "','" . $cvalue . "','" . $ccode . "'," . $cstatus . ",'" . $cdate . "','" . $ctitle . "'," . $minamt . "," . $minquan . ")");
+														
+														$heading = array(
+															"en" => 'New Coupon: ' . $ctitle . ' 🔔'
+														);
+														$content = array(
+															"en" => $cdesc
+														);
+
+														$fields = array(
+															'app_id' => ONE_KEY,
+															'included_segments' => array('Subscribed Users'),
+															'data' => array("url" => $url, "message" => $cdesc),
+															'headings' => $heading,
+															'contents' => $content
+														);
+
+														$fields = json_encode($fields);
+														//	print("\nJSON sent:\n");
+														//	print($fields);
+
+														$ch = curl_init();
+														curl_setopt($ch, CURLOPT_URL, "https://onesignal.com/api/v1/notifications");
+														curl_setopt($ch, CURLOPT_HTTPHEADER, array(
+															'Content-Type: application/json; charset=utf-8',
+															'Authorization: Basic ' . ONE_HASH
+														));
+														curl_setopt($ch, CURLOPT_RETURNTRANSFER, TRUE);
+														curl_setopt($ch, CURLOPT_HEADER, FALSE);
+														curl_setopt($ch, CURLOPT_POST, TRUE);
+														curl_setopt($ch, CURLOPT_POSTFIELDS, $fields);
+														curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, FALSE);
+
+														$response = curl_exec($ch);
+														curl_close($ch);
+
+														date_default_timezone_set('Asia/Kolkata');
+														$timestamp = date("Y-m-d H:i:s");
+														mysqli_query($con, "insert into noti(`msg`,`date`,`title`,`img`)values('" . $cdesc . "','" . $timestamp . "','New Coupon: " . $ctitle . "','" . $url . "')");
 													?>
 
 														<script type="text/javascript">
@@ -434,10 +474,6 @@ function resizeImage($resourceType, $image_width, $image_height, $resizeWidth, $
 
 						</div>
 					<?php } ?>
-
-
-
-
 
 				</div>
 			</div>

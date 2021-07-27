@@ -55,7 +55,7 @@ define('r_hash', $getkey['r_hash']);
                                                             <th>Customer Email</th>
                                                             <th>Customer Mobile</th>
                                                             <th>Password</th>
-                                                            <th>Wallet Balance</th>
+                                                            <th>Reward Points</th>
                                                             <th>Customer Address</th>
                                                             <th>Total Orders Received</th>
                                                             <th>Total Purchase Amount (in ₹)</th>

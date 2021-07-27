@@ -9,8 +9,8 @@ require 'db.php';
 $getkey = $con->query("select * from setting")->fetch_assoc();
 define('ADMIN_KEY', $getkey['admin_key']);
 define('ADMIN_HASH', $getkey['admin_hash']);
-define('SHOPS_KEY', $getkey['shops_key']);
-define('SHOPS_HASH', $getkey['shops_hash']);
+define('ONE_KEY', $getkey['one_key']);
+define('ONE_HASH', $getkey['one_hash']);
 define('API_KEY', $getkey['sendgrid_key']);
 define('API_EMAIL', $getkey['sendgrid_email']);
 define('CALL', $getkey['callsupport']);
@@ -61,7 +61,46 @@ if ($data['uid'] == '') {
 
   $con->query("insert into orders(`oid`,`uid`,`pname`,`pid`,`ptype`,`pprice`,`ddate`,`timesloat`,`order_date`,`status`,`qty`,`total`,`p_method`,`address_id`,`tax`,`tid`,`cou_amt`,`coupon_id`,`wal_amt`)values('" . $oid . "'," . $uid . ",'" . $pname . "','" . $pid . "','" . $ptype . "','" . $pprice . "','" . $ddate . "','" . $timesloat . "','" . $timestamp . "','" . $status . "','" . $qty . "'," . $total . ",'" . $p_method . "'," . $address_id . "," . $tax . ",'" . $tid . "'," . $cou_amt . "," . $coupon_id . "," . $wal_amt . ")");
 
-  $con->query("update user set wallet=wallet-" . $wal_amt . " where id=" . $uid . "");
+  $point = floatval($wal_amt) == 0.00 ? intval($subtotal / 100 * -1) : intval($wal_amt / 0.20);
+
+  $con->query("update user set wallet=wallet-(" . $point . ") where id=" . $uid . "");
+
+  if (floatval($wal_amt) == 0.00) {
+    $point_heading = array(
+      "en" => "⭐ Reward received : " . $point . " points ⭐"
+    );
+    $point_content = array(
+      "en" => "You have received {$point} points on your last purchase."
+    );
+    // for Point Noti
+    $shops_fields = array(
+      'app_id' => ONE_KEY,
+      'included_segments' => array("Subscribed Users"),
+      'filters' => array(array('field' => 'tag', 'key' => 'userId', 'relation' => '=', 'value' => $uid)),
+      'headings' => $point_heading,
+      'contents' => $point_content
+    );
+    $shops_fields = json_encode($shops_fields);
+
+    $shops_ch = curl_init();
+    curl_setopt($shops_ch, CURLOPT_URL, "https://onesignal.com/api/v1/notifications");
+    curl_setopt(
+      $shops_ch,
+      CURLOPT_HTTPHEADER,
+      array(
+        'Content-Type: application/json; charset=utf-8',
+        'Authorization: Basic ' . ONE_HASH
+      )
+    );
+    curl_setopt($shops_ch, CURLOPT_RETURNTRANSFER, TRUE);
+    curl_setopt($shops_ch, CURLOPT_HEADER, FALSE);
+    curl_setopt($shops_ch, CURLOPT_POST, TRUE);
+    curl_setopt($shops_ch, CURLOPT_POSTFIELDS, $shops_fields);
+    curl_setopt($shops_ch, CURLOPT_SSL_VERIFYPEER, FALSE);
+
+    $response = curl_exec($shops_ch);
+    curl_close($shops_ch);
+  }
 
   $returnArr = array("ResponseCode" => "200", "Result" => "true", "ResponseMsg" => "Order Placed Successfully!!!");
 
@@ -122,34 +161,6 @@ if ($data['uid'] == '') {
   $response = curl_exec($admin_ch);
   curl_close($admin_ch);
 
-  // for Shops Panel
-  $shops_fields = array(
-    'app_id' => SHOPS_KEY,
-    'included_segments' => array("Subscribed Users"),
-    'headings' => $heading,
-    'contents' => $content
-  );
-  $shops_fields = json_encode($shops_fields);
-
-  $shops_ch = curl_init();
-  curl_setopt($shops_ch, CURLOPT_URL, "https://onesignal.com/api/v1/notifications");
-  curl_setopt(
-    $shops_ch,
-    CURLOPT_HTTPHEADER,
-    array(
-      'Content-Type: application/json; charset=utf-8',
-      'Authorization: Basic ' . SHOPS_HASH
-    )
-  );
-  curl_setopt($shops_ch, CURLOPT_RETURNTRANSFER, TRUE);
-  curl_setopt($shops_ch, CURLOPT_HEADER, FALSE);
-  curl_setopt($shops_ch, CURLOPT_POST, TRUE);
-  curl_setopt($shops_ch, CURLOPT_POSTFIELDS, $shops_fields);
-  curl_setopt($shops_ch, CURLOPT_SSL_VERIFYPEER, FALSE);
-
-  $response = curl_exec($shops_ch);
-  curl_close($shops_ch);
-
   // PHP Mailer Integration by Subhankar Pal | @subho57
   $mail = new PHPMailer();
   $mail->isSMTP();
@@ -166,7 +177,8 @@ if ($data['uid'] == '') {
   $mail->addReplyTo(API_EMAIL, 'Calcutta Medical Stores');
   $mail->addAddress($c['email'], $c['name']);
   $mail->Subject = "Your order " . $order['oid'] . " of " . $count . " item(s) has been placed.";
-  $mail->msgHTML("<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Transitional//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd\">
+  $mail->msgHTML(
+    "<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Transitional//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd\">
         <html xmlns=\"http://www.w3.org/1999/xhtml\" xmlns:o=\"urn:schemas-microsoft-com:office:office\" style=\"width:100%;font-family:arial, 'helvetica neue', helvetica, sans-serif;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;padding:0;Margin:0\">
          <head> 
           <meta charset=\"UTF-8\"> 

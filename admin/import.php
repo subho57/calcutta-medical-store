@@ -52,13 +52,13 @@ require 'include/header.php';
 
             <?php
             if (isset($_POST['sub_cat'])) {
-              $csv = array();
+              // $csv = array();
 
               // check there are no errors
               if ($_FILES['csv']['error'] == 0) {
                 $name = $_FILES['csv']['name'];
-                $ext = strtolower(end(explode('.', $_FILES['csv']['name'])));
-                $type = $_FILES['csv']['type'];
+                $ext = strtolower(end(explode('.', $name)));
+                // $type = $_FILES['csv']['type'];
                 $tmpName = $_FILES['csv']['tmp_name'];
 
                 // check the file is a csv
@@ -67,16 +67,16 @@ require 'include/header.php';
                     // necessary if a large csv file
                     set_time_limit(0);
 
-                    $row = 0;
+                    // $row = 0;
                     fgets($handle);
-                    while (($data = fgetcsv($handle, 1000, ',')) !== FALSE) {
+                    while (($data = fgetcsv($handle, 0, ',')) !== FALSE) {
                       // number of fields in the csv
-                      $col_count = count($data);
+                      // $col_count = count($data);
 
                       date_default_timezone_set('Asia/Kolkata');
                       $timestamp = date("Y-m-d");
                       // get the values from the csv
-                      $counts = $con->query("select * from product where pname='" . ucwords(strip_tags(mysqli_real_escape_string($con, $data[0]))) . "'")->num_rows;
+                      $counts = $con->query("select id from product where pname='" . ucwords(strip_tags(mysqli_real_escape_string($con, $data[0]))) . "'")->num_rows;
 
                       if ($counts == 0) {
                         $cname = ucwords(strip_tags(mysqli_real_escape_string($con, $data[4])));
@@ -87,10 +87,10 @@ require 'include/header.php';
                         $con->query("INSERT INTO `subcategory` SELECT NULL, $cid, '$sname', '" . $data[1] . "' FROM DUAL WHERE NOT EXISTS (SELECT `id` from `subcategory` where `name`='$sname')");
                         $sid = $con->query("select id from subcategory where `name`='$sname'")->fetch_assoc()['id'];
                         
-                        $con->query("insert into product(`pname`,`pimg`,`prel`,`sname`,`cid`,`sid`,`psdesc`,`pgms`,`pprice`,`date`,`status`,`stock`,`discount`,`popular`)values('" . ucwords(strip_tags(mysqli_real_escape_string($con, $data[0]))) . "','" . $data[1] . "','" . $data[2] . "','" . $data[3] . "'," . $cid . "," . $sid . ",'" . strip_tags(mysqli_real_escape_string($con, $data[6])) . "','" . $data[7] . "','" . $data[8] . "','" . $timestamp . "'," . $data[10] . "," . $data[9] . "," . $data[11] . "," . $data[12] . ")");
+                        $con->query("insert into product(`pname`,`pimg`,`prel`,`sname`,`cid`,`sid`,`psdesc`,`pgms`,`pprice`,`date`,`status`,`stock`,`discount`,`popular`)values('" . ucwords(strip_tags(mysqli_real_escape_string($con, $data[0]))) . "','" . $data[1] . "','" . $data[2] . "','" . $data[3] . "'," . $cid . "," . $sid . ",'" . strip_tags(mysqli_real_escape_string($con, $data[6])) . "','1 Unit','" . $data[8] . "','" . $timestamp . "'," . $data[10] . "," . $data[9] . "," . $data[11] . "," . $data[12] . ")");
                       }
                       // inc the row
-                      $row++;
+                      // $row++;
                     }
 
                     fclose($handle);
@@ -100,9 +100,9 @@ require 'include/header.php';
                     $(document).ready(function() {
                       toastr.options.timeOut = 4500; // 1.5s
                       toastr.info('Products Imported Successfully!!');
-                      setTimeout(function() {
-                        window.location.href = "productlist.php";
-                      }, 1500);
+                      // setTimeout(function() {
+                      //   window.location.href = "productlist.php";
+                      // }, 1500);
                     });
                   </script>
             <?php
