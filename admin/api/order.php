@@ -65,6 +65,8 @@ if ($data['uid'] == '') {
 
   $con->query("update user set wallet=wallet-(" . $point . ") where id=" . $uid . "");
 
+  $point = $point * -1;
+
   if (floatval($wal_amt) == 0.00) {
     $point_heading = array(
       "en" => "⭐ Reward received : " . $point . " points ⭐"
