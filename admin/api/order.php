@@ -67,12 +67,12 @@ if ($data['uid'] == '') {
 
   $point = $point * -1;
 
-  if (floatval($wal_amt) == 0.00) {
+  if (floatval($wal_amt) == 0.00 && $point != 0) {
     $point_heading = array(
       "en" => "⭐ Reward received : " . $point . " points ⭐"
     );
     $point_content = array(
-      "en" => "You have received {$point} points on your last purchase."
+      "en" => "You have received {$point} reward points on your last purchase."
     );
     // for Point Noti
     $shops_fields = array(
