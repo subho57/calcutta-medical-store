@@ -41,6 +41,7 @@ require 'include/header.php';
                                                         <th>Small Description</th>
                                                         <th>Product Range</th>
                                                         <th>Product Price</th>
+                                                        <th>Discount</th>
                                                         <th>In Stock ?</th>
                                                         <th>Status</th>
                                                         <th>Action</th>
@@ -78,6 +79,7 @@ require 'include/header.php';
                                                             <td><?php echo substr($rkl['psdesc'], 0, 100) . '....'; ?></td>
                                                             <td><?php echo $rkl['pgms']; ?></td>
                                                             <td><?php echo $rkl['pprice']; ?></td>
+                                                            <td><?php echo $rkl['discount']; ?></td>
                                                             <td><?php if ($rkl['stock'] == 1) {
                                                                     echo 'Yes';
                                                                 } else {
