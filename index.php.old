@@ -35,9 +35,9 @@
     <!-- OG Tags: Social Media Tags -->
     <meta property="og:locale" content="en_IN">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://www.calcuttamedicalstore.in">
+    <meta property="og:url" content="https://calcuttamedicalstore.in">
     <meta property="og:site_name" content="<?php echo $fset['title']; ?>">
-    <meta property="og:image" content="https://www.calcuttamedicalstore.in/admin/<?php echo $fset['favicon']; ?>">
+    <meta property="og:image" content="https://calcuttamedicalstore.in/admin/<?php echo $fset['favicon']; ?>">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
     <meta property="og:image:type" content="image/png">
@@ -47,7 +47,7 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="<?php echo $fset['title']; ?> - Kolkata's Best Online Pharmacy">
     <meta name="twitter:site" content="@calcuttamedical">
-    <meta name="twitter:image" content="https://www.calcuttamedicalstore.in/admin/<?php echo $fset['favicon']; ?>">
+    <meta name="twitter:image" content="https://calcuttamedicalstore.in/admin/<?php echo $fset['favicon']; ?>">
     <meta name="twitter:creator" content="@calcuttamedical">
     <meta name="twitter:description" content="<?php echo $fset['title']; ?> is Kolkata's best online pharmacy that allows you to conveniently order online, refill, or consult with an online pharmacist and offers free shipping and low prices.">
 
@@ -104,9 +104,9 @@
         {
             "@context": "https://schema.org",
             "@type": "Organization",
-            "url": "http://www.calcuttamedicalstore.in",
+            "url": "http://calcuttamedicalstore.in",
             "name": "<?php echo $fset['title']; ?>",
-            "logo": "https://www.calcuttamedicalstore.in/admin/<?php echo $fset['favicon']; ?>",
+            "logo": "https://calcuttamedicalstore.in/admin/<?php echo $fset['favicon']; ?>",
             "sameAs": [
                 "https://www.facebook.com/Calcutta-Medical-Store-100149615672610",
                 "https://twitter.com/calcuttamedical",
