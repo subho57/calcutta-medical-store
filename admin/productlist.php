@@ -28,7 +28,7 @@ require 'include/header.php';
                                     <div class="card-body collapse show">
                                         <div class="card-block card-dashboard">
 
-                                            <table class="table table-striped table-bordered dom-jQuery-events">
+                                            <table class="table table-striped table-bordered dom-jQuery-events" id="example">
                                                 <thead>
                                                     <tr>
                                                         <th>Sr No.</th>
@@ -141,7 +141,33 @@ require 'include/header.php';
     <?php
     require 'include/js.php';
     ?>
+
+    <script>
+        $('#example').DataTable({
+            dom: 'Bfrtip',
+            buttons: [
+                'excelHtml5',
+                'csvHtml5'
+            ]
+        });
+    </script>
+
     <style>
+        #example_wrapper {
+            overflow: auto;
+        }
+
+        td p {
+            /* border-bottom: 1px solid #dee2e6;*/
+            /* padding: 0% !important; */
+            margin: 0px;
+            /* font-size:11px;*/
+        }
+
+        td.manage_td {
+            padding: 0% !important;
+        }
+
         table {
             font-size: 12px;
         }

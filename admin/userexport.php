@@ -133,40 +133,37 @@ define('r_hash', $getkey['r_hash']);
 
     <?php require 'include/js.php'; ?>
 
+    <script>
+        $('#example').DataTable({
+            dom: 'Bfrtip',
+            buttons: [
+                'excelHtml5',
+                'csvHtml5'
+            ]
+        });
+    </script>
+
+    <style>
+        #example_wrapper {
+            overflow: auto;
+        }
+
+        td p {
+            /* border-bottom: 1px solid #dee2e6;*/
+            /* padding: 0% !important; */
+            margin: 0px;
+            /* font-size:11px;*/
+        }
+
+        td.manage_td {
+            padding: 0% !important;
+        }
+
+        table {
+            font-size: 12px;
+        }
+    </style>
+
 </body>
-
-
-
-<script>
-    $('#example').DataTable({
-        dom: 'Bfrtip',
-        buttons: [
-
-            'excelHtml5'
-
-        ]
-    });
-</script>
-
-<style>
-    #example_wrapper {
-        overflow: auto;
-    }
-
-    td p {
-        /* border-bottom: 1px solid #dee2e6;*/
-        /* padding: 0% !important; */
-        margin: 0px;
-        /* font-size:11px;*/
-    }
-
-    td.manage_td {
-        padding: 0% !important;
-    }
-
-    table {
-        font-size: 12px;
-    }
-</style>
 
 </html>
