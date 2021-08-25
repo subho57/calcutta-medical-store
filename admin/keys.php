@@ -33,76 +33,76 @@ require 'include/header.php';
                                     <form class="form" method="post" enctype="multipart/form-data">
                                         <div class="form-body row">
                                             <?php
-                                            $getkey = $con->query("select * from setting")->fetch_assoc();
+                                            
                                             ?>
                                             <div class="col-md-6 col-lg-6 col-xs-12 col-sm-12">
                                                 <div class="form-group">
                                                     <label for="cname">User Onesignal App Id</label>
                                                     <input type="text" id="cname" class="form-control" name="oid"
-                                                           value="<?php echo $getkey['one_key']; ?>" required>
+                                                           value="<?php echo $fset['one_key']; ?>" required>
                                                 </div>
                                             </div>
                                             <div class="col-md-6 col-lg-6 col-xs-12 col-sm-12">
                                                 <div class="form-group">
                                                     <label for="cname">User Onesignal Rest API KEY</label>
                                                     <input type="text" id="cname" class="form-control" name="ohash"
-                                                           value="<?php echo $getkey['one_hash']; ?>" required>
+                                                           value="<?php echo $fset['one_hash']; ?>" required>
                                                 </div>
                                             </div>
                                             <div class="col-md-6 col-lg-6 col-xs-12 col-sm-12">
                                                 <div class="form-group">
                                                     <label for="cname">Rider Onesignal App Id</label>
                                                     <input type="text" id="cname" class="form-control" name="rid"
-                                                           value="<?php echo $getkey['r_key']; ?>">
+                                                           value="<?php echo $fset['r_key']; ?>">
                                                 </div>
                                             </div>
                                             <div class="col-md-6 col-lg-6 col-xs-12 col-sm-12">
                                                 <div class="form-group">
                                                     <label for="cname">Rider Onesignal Rest API KEY</label>
                                                     <input type="text" id="cname" class="form-control" name="rhash"
-                                                           value="<?php echo $getkey['r_hash']; ?>">
+                                                           value="<?php echo $fset['r_hash']; ?>">
                                                 </div>
                                             </div>
                                             <div class="col-md-6 col-lg-6 col-xs-12 col-sm-12">
                                                 <div class="form-group">
                                                     <label for="cname">Admin Panel OneSignal App Id</label>
                                                     <input type="text" id="cname" class="form-control" name="aid"
-                                                           value="<?php echo $getkey['admin_key']; ?>">
+                                                           value="<?php echo $fset['admin_key']; ?>">
                                                 </div>
                                             </div>
                                             <div class="col-md-6 col-lg-6 col-xs-12 col-sm-12">
                                                 <div class="form-group">
                                                     <label for="cname">Admin Panel OneSignal Rest API KEY</label>
                                                     <input type="text" id="cname" class="form-control" name="ahash"
-                                                           value="<?php echo $getkey['admin_hash']; ?>">
+                                                           value="<?php echo $fset['admin_hash']; ?>">
                                                 </div>
                                             </div>
                                             <div class="col-md-6 col-lg-6 col-xs-12 col-sm-12">
                                                 <div class="form-group">
                                                     <label for="cname">Shops Panel OneSignal App Id</label>
                                                     <input type="text" id="cname" class="form-control" name="sid"
-                                                           value="<?php echo $getkey['shops_key']; ?>">
+                                                           value="<?php echo $fset['shops_key']; ?>">
                                                 </div>
                                             </div>
                                             <div class="col-md-6 col-lg-6 col-xs-12 col-sm-12">
                                                 <div class="form-group">
                                                     <label for="cname">Shops Panel OneSignal Rest API KEY</label>
                                                     <input type="text" id="cname" class="form-control" name="shash"
-                                                           value="<?php echo $getkey['shops_hash']; ?>">
+                                                           value="<?php echo $fset['shops_hash']; ?>">
                                                 </div>
                                             </div>
                                             <div class="col-md-6 col-lg-6 col-xs-12 col-sm-12">
                                                 <div class="form-group">
                                                     <label for="cname">Sendgrid Rest API KEY</label>
                                                     <input type="text" id="cname" class="form-control" name="skey"
-                                                           value="<?php echo $getkey['sendgrid_key']; ?>">
+                                                           value="<?php echo $fset['sendgrid_key']; ?>">
                                                 </div>
                                             </div>
                                             <div class="col-md-6 col-lg-6 col-xs-12 col-sm-12">
                                                 <div class="form-group">
                                                     <label for="cname">Sendgrid API Linked Email 📧</label>
                                                     <input type="text" id="cname" class="form-control" name="smail"
-                                                           value="<?php echo $getkey['sendgrid_email']; ?>">
+                                                           value="<?php echo $fset['sendgrid_email']; ?>">
                                                 </div>
                                             </div>
                                         </div>

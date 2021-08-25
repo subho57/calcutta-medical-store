@@ -1,6 +1,6 @@
 <?php
 require 'db.php';
-header('Content-type: text/json');
+
 $sel = $con->query("select * from category order by catname");
 $myarray = array();
 while ($row = $sel->fetch_assoc()) {

@@ -16,9 +16,9 @@ if (session_status() == PHP_SESSION_NONE) {
  * Change these details according to your server
  */
 $server = "localhost";
-$username = "u261452081_calcuttamedic";
+$username = "u335696085_calcuttamedic";
 $password = "CalcuttaMedicalStores@123";
-$database = "u261452081_calcuttamedic";
+$database = "u335696085_calcuttamedic";
 $port = 3306;
 
 mysqli_report(MYSQLI_REPORT_ERROR | MYSQLI_REPORT_STRICT);

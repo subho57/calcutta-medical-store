@@ -1,6 +1,6 @@
 <?php
 require 'db.php';
-header('Content-type: text/json');
+
 $data = json_decode(file_get_contents('php://input'), true);
 
 if ($data['cid'] != '' or $data['sid'] != '') {

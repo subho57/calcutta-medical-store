@@ -6,12 +6,12 @@ use PHPMailer\PHPMailer\SMTP;
 require 'db.php';
 require dirname(dirname(__FILE__)) . '/assets/vendor/autoload.php';
 
-$getkey = $con->query("select * from setting")->fetch_assoc();
-define('ONE_KEY', $getkey['one_key']);
-define('ONE_HASH', $getkey['one_hash']);
-define('API_KEY', $getkey['sendgrid_key']);
-define('API_EMAIL', $getkey['sendgrid_email']);
-define('CALL', $getkey['callsupport']);
+
+define('ONE_KEY', $fset['one_key']);
+define('ONE_HASH', $fset['one_hash']);
+define('API_KEY', $fset['sendgrid_key']);
+define('API_EMAIL', $fset['sendgrid_email']);
+define('CALL', $fset['callsupport']);
 
 header('Content-Type: text/html; charset=utf-8');
 $data = json_decode(file_get_contents('php://input'), true);

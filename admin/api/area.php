@@ -1,6 +1,6 @@
 <?php
 require 'db.php';
-header('Content-type: text/json');
+
 $sel = $con->query("select * from area_db where status=1");
 while ($row = $sel->fetch_assoc()) {
     $myarray[] = $row;

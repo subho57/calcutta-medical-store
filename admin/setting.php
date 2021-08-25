@@ -49,13 +49,13 @@ function resizeImage($resourceType, $image_width, $image_height, $resizeWidth, $
 										<form class="form" method="post" enctype="multipart/form-data">
 											<div class="form-body row">
 												<?php
-												$getkey = $con->query("select * from setting")->fetch_assoc();
+												
 												?>
 
 												<div class="col-md-3 col-lg-3 col-xs-12 col-sm-12">
 													<div class="form-group">
 														<label for="cname">Currency</label>
-														<input type="text" id="cname" class="form-control" name="currency" value="<?php echo $getkey['currency']; ?>" required>
+														<input type="text" id="cname" class="form-control" name="currency" value="<?php echo $fset['currency']; ?>" required>
 													</div>
 												</div>
 
@@ -71,7 +71,7 @@ function resizeImage($resourceType, $image_width, $image_height, $resizeWidth, $
 															<?php
 															for ($k = 0; $k < $limit; $k++) {
 															?>
-																<option <?php echo $tzlist[$k]; ?> <?php if ($tzlist[$k] == $getkey['timezone']) {
+																<option <?php echo $tzlist[$k]; ?> <?php if ($tzlist[$k] == $fset['timezone']) {
 																										echo 'selected';
 																									} ?>><?php echo $tzlist[$k]; ?></option>
 															<?php } ?>
@@ -82,20 +82,20 @@ function resizeImage($resourceType, $image_width, $image_height, $resizeWidth, $
 												<div class="col-md-3 col-lg-3 col-xs-12 col-sm-12">
 													<div class="form-group">
 														<label for="cname">Order Min Value</label>
-														<input type="text" id="cname" class="form-control" name="omin" value="<?php echo $getkey['o_min']; ?>" required>
+														<input type="text" id="cname" class="form-control" name="omin" value="<?php echo $fset['o_min']; ?>" required>
 													</div>
 												</div>
 												<div class="col-md-3 col-lg-3 col-xs-12 col-sm-12">
 													<div class="form-group">
 														<label for="cname">Service Charge %</label>
-														<input type="text" id="cname" class="form-control" name="tax" value="<?php echo $getkey['tax']; ?>" required>
+														<input type="text" id="cname" class="form-control" name="tax" value="<?php echo $fset['tax']; ?>" required>
 													</div>
 												</div>
 
 												<div class="col-md-6 col-lg-6 col-xs-12 col-sm-12">
 													<div class="form-group">
 														<label for="cname">Website Title</label>
-														<input type="text" id="cname" class="form-control" name="title" value="<?php echo $getkey['title']; ?>" required>
+														<input type="text" id="cname" class="form-control" name="title" value="<?php echo $fset['title']; ?>" required>
 													</div>
 												</div>
 
@@ -103,10 +103,10 @@ function resizeImage($resourceType, $image_width, $image_height, $resizeWidth, $
 													<div class="form-group">
 														<label for="cname">App Under Maintenance?</label>
 														<select name="maintaince" class="form-control">
-															<option value="0" <?php if ($getkey['maintaince'] == 0) {
+															<option value="0" <?php if ($fset['maintaince'] == 0) {
 																					echo 'selected';
 																				} ?>>No</option>
-															<option value="1" <?php if ($getkey['maintaince'] == 1) {
+															<option value="1" <?php if ($fset['maintaince'] == 1) {
 																					echo 'selected';
 																				} ?>>Yes</option>
 														</select>
@@ -116,7 +116,7 @@ function resizeImage($resourceType, $image_width, $image_height, $resizeWidth, $
 												<div class="col-md-3 col-lg-3 col-xs-12 col-sm-12">
 													<div class="form-group">
 														<label for="cname">Support Number</label>
-														<input type="text" id="cname" class="form-control" name="callsupport" value="<?php echo $getkey['callsupport']; ?>" required>
+														<input type="text" id="cname" class="form-control" name="callsupport" value="<?php echo $fset['callsupport']; ?>" required>
 													</div>
 												</div>
 
@@ -125,7 +125,7 @@ function resizeImage($resourceType, $image_width, $image_height, $resizeWidth, $
 														<label for="cname">Website Logo</label>
 														<input type="file" class="form-control" name="logo">
 														<br>
-														<img src="<?php echo $getkey['logo']; ?>" width="60" height="60" />
+														<img src="<?php echo $fset['logo']; ?>" width="60" height="60" />
 													</div>
 												</div>
 
@@ -135,7 +135,7 @@ function resizeImage($resourceType, $image_width, $image_height, $resizeWidth, $
 														<label for="cname">Website Favicon</label>
 														<input type="file" class="form-control" name="favicon">
 														<br>
-														<img src="<?php echo $getkey['favicon']; ?>" width="60" height="60" />
+														<img src="<?php echo $fset['favicon']; ?>" width="60" height="60" />
 													</div>
 												</div>
 
@@ -143,28 +143,28 @@ function resizeImage($resourceType, $image_width, $image_height, $resizeWidth, $
 												<div class="col-md-12 col-lg-12 col-xs-12 col-sm-12">
 													<div class="form-group">
 														<label for="cname">Privacy Policy</label>
-														<textarea class="form-control" rows="5" name="p_data" style="resize: none;"><?php echo $getkey['privacy_policy']; ?></textarea>
+														<textarea class="form-control" rows="5" name="p_data" style="resize: none;"><?php echo $fset['privacy_policy']; ?></textarea>
 													</div>
 												</div>
 
 												<div class="col-md-12 col-lg-12 col-xs-12 col-sm-12">
 													<div class="form-group">
 														<label for="cname">About Us</label>
-														<textarea class="form-control" rows="5" name="a_data" style="resize: none;"><?php echo $getkey['about_us']; ?></textarea>
+														<textarea class="form-control" rows="5" name="a_data" style="resize: none;"><?php echo $fset['about_us']; ?></textarea>
 													</div>
 												</div>
 
 												<div class="col-md-12 col-lg-12 col-xs-12 col-sm-12">
 													<div class="form-group">
 														<label for="cname">Contact Us</label>
-														<textarea class="form-control" rows="5" name="c_data" style="resize: none;"><?php echo $getkey['contact_us']; ?></textarea>
+														<textarea class="form-control" rows="5" name="c_data" style="resize: none;"><?php echo $fset['contact_us']; ?></textarea>
 													</div>
 												</div>
 
 												<div class="col-md-12 col-lg-12 col-xs-12 col-sm-12">
 													<div class="form-group">
 														<label for="cname">Terms & Conditions</label>
-														<textarea class="form-control" rows="5" name="terms" style="resize: none;"><?php echo $getkey['terms']; ?></textarea>
+														<textarea class="form-control" rows="5" name="terms" style="resize: none;"><?php echo $fset['terms']; ?></textarea>
 													</div>
 												</div>
 
