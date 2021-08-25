@@ -6,7 +6,7 @@ if ($data['keyword'] != '') {
 
     $cid = $data['keyword'];
 
-    $counter = $con->query("select * from product where (pname like '%" . $cid . "%' or pdesc like '%" . $cid . "%' or soundex('" . $cid . "') = soundex(pname)) and status=1");
+    $counter = $con->query("select * from product where (pname like '%" . $cid . "%' or pdesc like '%" . $cid . "%') and status=1");
     if ($counter->num_rows != 0) {
         $result = array();
 
