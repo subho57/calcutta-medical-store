@@ -6,7 +6,7 @@ if ($data['keyword'] != '') {
 
     $key = strip_tags(mysqli_real_escape_string($con, $data['keyword']));
 
-    $counter = $con->query("select * from product where (pname like '%$key%' or psdesc like '%$key%' or sname like '%$key%') and status=1");
+    $counter = $con->query("select * from product where pname like '%$key%' and status=1");
     if ($counter->num_rows != 0) {
         $result = array();
 
